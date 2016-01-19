@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                         <h2 class="text-center">Search Artworks</h2>
-           <div id="custom-search-input">
+                         <div id="custom-search-input">
                             <div class="input-group col-md-12">
                                 <input type="text" class="  search-query form-control" placeholder="Search by Artist Name, Fair Name, etc." />
                                 <span class="input-group-btn">
