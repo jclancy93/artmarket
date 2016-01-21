@@ -1,5 +1,35 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+.panel-heading {
+	display: none;
+}
+
+h2 {
+	color: white;
+}
+
+#search-container {
+	background: url(https://images.artnet.com/aoa_lot_images/Banners/8/richter-postmod-timeStamp635888056106134540_1164_579.jpg) repeat center center fixed;
+}
+
+.panel {
+	top: 150px;	
+}
+
+#custom-search-input {
+	margin-top: 25px;
+}
+
+
 .panel-body {
-	background-color: aquamarine;
+	background: url(../img/black-bg.png) repeat center center fixed;
+	border: 0;
+}
+
+body { 
+  background: url(../img/art-background1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
