@@ -11,5 +11,4 @@ class Artwork extends Model
      *
      * @var array
      */
-    protected $fillable = ['title'];
 }

@@ -14,9 +14,12 @@ class CreateArtworksTable extends Migration
     {
         Schema::create('artworks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('name');
-            $table->timestamps();
+            $table->string('artist');
+            $table->string('artwork');
+            $table->string('price');
+            $table->string('image');
+            $table->string('notes');
+            $table->nullableTimestamps();
         });
     }
 

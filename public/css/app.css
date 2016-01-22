@@ -2,12 +2,17 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Didact Gothic', sans-serif; }
 
 .navbar-default {
-  background-color: black;
+  background-color: white;
   border: 0; }
 
 .navbar-default .navbar-nav > li > a:hover {
   color: #333;
-  background-color: black; }
+  background-color: #dfdfdf; }
+
+.navbar {
+  min-height: 75px !important;
+  padding-top: 10px !important;
+  margin-bottom: 0px !important; }
 
 .nav > a {
   color: white !important; }

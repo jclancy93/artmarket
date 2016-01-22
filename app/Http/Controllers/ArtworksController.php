@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Artworks;
+use App\Artwork;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -21,7 +21,7 @@ class ArtworksController extends Controller
 
         $artworks = Artwork::all();
 
-        return view('artworks/index')->with('artworks', $artworks);
+        return view('artworks')->with('artworks', $artworks);
     }
 
     /**

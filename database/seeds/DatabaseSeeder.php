@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,5 +14,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UserTableSeeder::class);
+        Model::unguard();
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
     }
 }
