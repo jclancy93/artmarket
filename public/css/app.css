@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6, p, a {
-  font-family: 'Didact Gothic', sans-serif; }
+  font-family: 'Didact Gothic', sans-serif !important; }
 
 .navbar-default {
   background-color: white;
@@ -33,12 +33,21 @@ h2 {
   top: 150px; }
 
 .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.row-fluid {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle; }
 
 .search-body {
   background: url(../img/black-bg.png) repeat center center fixed;

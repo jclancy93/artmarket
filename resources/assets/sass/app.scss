@@ -1,7 +1,7 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-h1, h2, h3, h4, h5, h6, p, a {
-	font-family: 'Didact Gothic', sans-serif;
+h1, h2, h3, h4, h5, h6, p, a{
+	font-family: 'Didact Gothic', sans-serif !important;
 }
 
 .navbar-default {
@@ -46,12 +46,13 @@ h2 {
 
 
 .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
 }
+
+.row-fluid {height: 100%; display:table-cell; vertical-align: middle;}
 
 
 .search-body {
