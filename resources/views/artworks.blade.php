@@ -6,12 +6,10 @@
     <!-- Current Tasks -->
     @if (count($artworks) > 0)
         <div class="panel panel-default">
-            <div class="panel-heading">
-                Current Tasks
-            </div>
+         <h1 class="text-center"> Artworks Index </h1>
 
             <div class="panel-body">
-                <table class="table table-striped task-table">
+                <table class="table table-hover">
 
                     <!-- Table Headings -->
                     <thead>
@@ -27,7 +25,7 @@
                         @foreach ($artworks as $artwork)
                             <tr>
                                 <!-- Showing all artworks -->
-                                <td class="table-text">
+                                <td class="table-text table-hover ">
                                     <div>{{ $artwork->image }}</div>
                                 </td>
 

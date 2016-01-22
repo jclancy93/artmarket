@@ -4,8 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1" style="top: 300px;">
-            <div class="panel panel-default search-body">
-                <div class="panel-heading">Dashboard</div>
+            <div class="col-md-10 col-md-offset-1 search-body" style="margin-top: -90px;">
             </div>
             <div class="search centered">
                     <h2 class="text-center search-text">SEARCH ARTWORKS</h2>
