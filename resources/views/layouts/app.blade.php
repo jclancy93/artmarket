@@ -15,6 +15,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/app.css"></link>
 
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+
     <style>
         body {
             font-family: 'Lato';
@@ -39,7 +42,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: white; font-size: 30px">
                     ART MARKET
                 </a>
             </div>
@@ -47,7 +50,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/home') }}" style="color: white;">Home</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -58,7 +61,7 @@
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white; font-size: 20px">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 

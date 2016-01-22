@@ -1,5 +1,27 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+h1, h2, h3, h4, h5, h6, p, a {
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.navbar-default {
+	background-color: black;
+	border: 0;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #333;
+    background-color: black;
+}
+
+.nav > a {
+	color: white !important;
+}
+
+.navbar-header {
+	color: white;
+}
+
 .panel-heading {
 	display: none;
 }
@@ -9,7 +31,7 @@ h2 {
 }
 
 #search-container {
-	background: url(https://images.artnet.com/aoa_lot_images/Banners/8/richter-postmod-timeStamp635888056106134540_1164_579.jpg) repeat center center fixed;
+	background: url(../img/black-bg.png) repeat center center fixed;
 }
 
 .panel {
@@ -20,10 +42,20 @@ h2 {
 	margin-top: 25px;
 }
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
 
-.panel-body {
+
+.search-body {
 	background: url(../img/black-bg.png) repeat center center fixed;
 	border: 0;
+	opacity: 1;
+	height: 150px;
 }
 
 body { 
