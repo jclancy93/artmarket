@@ -28,11 +28,11 @@
                     <tbody>
                         @foreach ($artworks as $artwork)
                             <tr>
+
                                 <!-- Showing all artworks -->
-                                <td class="table-text table-hover ">
-                                    <div>{{ $artwork->image }}</div>
-                                    <strong style="font-family: 'Didact Gothic';">SEE DETAILS</strong>
-                                </td>
+                                    <td class="table-text table-hover ">
+                                        <div><img src="img/art_images/image_unavailable.png" style="width: 50px;x"></div>
+                                    </td>
 
                                 <td class="table-text">
                                     <div>{{ $artwork->artist }}</div>

@@ -12,9 +12,8 @@
 */
 
 Route::resource('artworks', 'ArtworksController');
-Route::resource('search', 'SearchController');
 Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworksController@index']);
-Route::get('search', ['uses' => 'SearchController@index']);
+Route::get('search', ['middleware' => 'web', 'uses' => 'SearchController@index']);
 
 
 
