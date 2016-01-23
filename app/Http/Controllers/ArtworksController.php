@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Artwork;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Auth\AuthController;
 
 class ArtworksController extends Controller
 {
@@ -29,9 +30,16 @@ class ArtworksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('artworks.create');
+    public function create(Request $request)
+    {   
+        if ($request->user()) {
+            // $request->user() returns an instance of the authenticated user...
+            return view('artworks.create');
+        }
+
+        else {
+            return view('auth/login');
+        }
 
     }
 
