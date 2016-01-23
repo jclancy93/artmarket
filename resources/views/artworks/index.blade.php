@@ -30,8 +30,9 @@
                             <tr>
                                 <!-- Showing all artworks -->
                                 <td class="table-text table-hover ">
-                                    <div><img src="/art_images/{{$artwork->id }}.png"></div>
+                                    <div><img src="img/art_images/{{$artwork->id }}.png" style="width: 50px; max-height: 50px;"></div>
                                 </td>
+
 
                                 <td class="table-text">
                                     <div>{{ $artwork->artist }}</div>

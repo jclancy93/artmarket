@@ -21,7 +21,7 @@ class ArtworksController extends Controller
 
         $artworks = Artwork::all();
 
-        return view('artworks')->with('artworks', $artworks);
+        return view('artworks.index')->with('artworks', $artworks);
     }
 
     /**
@@ -31,7 +31,8 @@ class ArtworksController extends Controller
      */
     public function create()
     {
-        //
+        return view('artworks.create');
+
     }
 
     /**
@@ -42,7 +43,20 @@ class ArtworksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $params = $request->input();
+
+        $artwork = new Artwork;
+        $artwork->artist = $params['artist'];
+        $artwork->artwork = $params['artwork'];
+        $artwork->price = $params['price'];
+        $artwork->notes = $params['notes'];
+
+        $artwork->save();
+
+        $imageName = $artwork->id . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move('../public/img/art_images', $imageName);
+
+        return redirect()->action('ArtworksController@index');
     }
 
     /**

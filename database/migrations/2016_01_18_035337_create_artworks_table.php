@@ -17,7 +17,6 @@ class CreateArtworksTable extends Migration
             $table->string('artist');
             $table->string('artwork');
             $table->string('price');
-            $table->string('image');
             $table->string('notes');
             $table->nullableTimestamps();
         });

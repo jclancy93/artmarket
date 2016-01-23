@@ -16,7 +16,7 @@ class Artwork extends Model
     {
         //If a property is passed in, search by that property, else search all props
             return $query
-                       ->where('artist', 'like', "%$term%");
+                       ->where('artwork', 'like', "%$term%");
     }
 
 }
