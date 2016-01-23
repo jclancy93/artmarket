@@ -50,15 +50,18 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">Home</a></li>
+                    <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">HOME</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTWORKS</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}" style="color: black; font-size: 16px;">Login</a></li>
-                        <li><a href="{{ url('/register') }}" style="color: black; font-size: 16px;">Register</a></li>
+                        <li><a href="{{ url('/login') }}" style="color: black; font-size: 16px;">LOGIN</a></li>
+                        <li><a href="{{ url('/register') }}" style="color: black; font-size: 16px;">REGISTER</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: black; font-size: 20px; padding-bottom: 25px;">

@@ -37,9 +37,16 @@
                                     <div>{{ $artwork->artwork }}</div>
                                 </td>
 
-                                <td class="table-text">
-                                    <div>{{ $artwork->price }}</div>
-                                </td>
+                                @if (Auth::guest())
+                                     <td class="table-text">
+                                        <a href="{{ url('/login') }}"><button class="btn btn-info">Log in to see Prices</button></a>
+                                    </td>
+
+                                @else
+                                    <td class="table-text">
+                                        <div>{{ $artwork->price }}</div>
+                                    </td>
+                                @endif
 
                                 <td class="table-text">
                                     <div>{{ $artwork->notes }}</div>

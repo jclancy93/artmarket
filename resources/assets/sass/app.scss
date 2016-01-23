@@ -44,6 +44,17 @@ h2 {
 	top: 150px;	
 }
 
+.btn-info {
+    color: #000; 
+    background-color: #fff; 
+    border: 1px black solid; 
+}
+
+.btn-info:hover {
+    color: white;
+    background-color: black;
+    border-color: #000;
+}
 
 .centered {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
