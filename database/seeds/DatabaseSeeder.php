@@ -55,5 +55,83 @@ class DatabaseSeeder extends Seeder
             'image' => 'Warhol Paintin',
             'notes' => 'Warhol Paintin',
         ]);
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
+
+        DB::table('artworks')->insert([
+            'artist' => 'Warhol',
+            'artwork' => 'Warhol Paintin',
+            'price' => '$100',
+            'image' => 'Warhol Paintin',
+            'notes' => 'Warhol Paintin',
+        ]);
     }
 }

@@ -11,4 +11,12 @@ class Artwork extends Model
      *
      * @var array
      */
+
+    public function scopeSearch($query, $term)
+    {
+        //If a property is passed in, search by that property, else search all props
+            return $query
+                       ->where('artist', 'like', "%$term%");
+    }
+
 }

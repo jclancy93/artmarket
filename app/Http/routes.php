@@ -12,7 +12,10 @@
 */
 
 Route::resource('artworks', 'ArtworksController');
+Route::resource('search', 'SearchController');
 Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworksController@index']);
+Route::get('search', ['uses' => 'SearchController@index']);
+
 
 
 /*

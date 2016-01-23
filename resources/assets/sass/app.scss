@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6, p, a{
 	min-height: 75px !important;
 	padding-top: 10px !important;
 	margin-bottom: 0px !important;
+	border-bottom: 1px #dfdfdf solid;
 }
 
 .nav > a {
@@ -79,4 +80,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.table-text {
+	font-family: Georgia;
 }

@@ -12,7 +12,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 .navbar {
   min-height: 75px !important;
   padding-top: 10px !important;
-  margin-bottom: 0px !important; }
+  margin-bottom: 0px !important;
+  border-bottom: 1px #dfdfdf solid; }
 
 .nav > a {
   color: white !important; }
@@ -68,5 +69,8 @@ h2 {
 body {
   background: url(../img/art-background1.jpg) no-repeat center center fixed;
   background-size: cover; }
+
+.table-text {
+  font-family: Georgia; }
 
 /*# sourceMappingURL=app.css.map */
