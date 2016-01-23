@@ -27,13 +27,12 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::post('/artwork', function (Request $request) {
-        //
-    });
+
     Route::get('/', 'HomeController@index');
     Route::resource('home', 'HomeController');
 	Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworksController@index']);
 	Route::get('search', ['middleware' => 'web', 'uses' => 'SearchController@index']);
+	Route::resource('artworks', 'ArtworksController');
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -44,5 +43,4 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['web']], function () {
     Route::auth();
 
-    Route::resource('artworks', 'ArtworksController');
 });
