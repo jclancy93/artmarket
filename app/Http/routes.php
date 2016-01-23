@@ -27,7 +27,6 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-
     Route::get('/', 'HomeController@index');
     Route::resource('home', 'HomeController');
 	Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworksController@index']);
