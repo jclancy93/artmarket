@@ -4,6 +4,11 @@ h1, h2, h3, h4, h5, h6, p, a{
 	font-family: 'Didact Gothic', sans-serif !important;
 }
 
+.art_image {
+	background: url('img/art_images/image_unavailable.png');
+	min-height: 50px;
+}
+
 .navbar-default {
 	background-color: white;
 	border: 0;
@@ -55,6 +60,13 @@ h2 {
     color: white;
     background-color: black;
     border-color: #000;
+}
+
+.btn-danger {
+	float: right; 
+	margin-top: -34px; 
+	margin-right: -10px;
+	z-index: 400;
 }
 
 .centered {
