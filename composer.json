@@ -38,7 +38,7 @@
         ],
         "post-install-cmd": [
             "php artisan clear-compiled",
-            "php artisan optimize"
+            "php artisan optimize",
             "chmod -R 777 storage"
         ],
         "pre-update-cmd": [
