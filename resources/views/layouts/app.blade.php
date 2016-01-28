@@ -8,7 +8,7 @@
     <title>Art Market</title>
 
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
@@ -55,7 +55,12 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTWORKS</a></li>
                 </ul>
-
+                @if (Auth::id() == 1)
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/artworks/create') }}" style="color: black; font-size: 16px;">ADD ARTWORK</a></li>
+                </ul>
+                @else
+                @endif
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->

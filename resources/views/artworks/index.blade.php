@@ -63,10 +63,25 @@
                                 <td class="table-text">
                                     <div>{{ $artwork->notes }}</div>
                                 </td>
+                                @if (Auth::id() == 1)
+                                <td class="table-text">
+                                    <a href="{{ url('/artwork/edit/{id}') }}"><button class="btn btn-info">EDIT</button></a>
+                                </td>
+                                <td class="table-text">
+                                    <form action="{{ url('artwork/'.$artwork->id) }}" method="POST">
+                                        {!! csrf_field() !!}
+                                        {!! method_field('DELETE') !!}
+
+                                        <button class="btn btn-info">DELETE</button>
+                                    </form>
+                                </td>
+                                @else
+                                @endif
 
                                 <td>
                                     <!-- TODO: Delete Button -->
                                 </td>
+
                             </tr>
                         @endforeach
                     </tbody>
