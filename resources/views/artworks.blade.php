@@ -30,7 +30,7 @@
                             <tr>
                                 <!-- Showing all artworks -->
                                 <td class="table-text table-hover ">
-                                    <div><img src="/art_images/{{$artwork->id }}.png"></div>
+                                    <div><img src="/art_images/{{$artwork->id }}.png" onerror="if (this.src != '/art_images/{{$artwork->id }}.png') this.src = 'img/art_images/image_unavailable.png';"></div>
                                 </td>
 
                                 <td class="table-text">

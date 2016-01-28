@@ -18,6 +18,14 @@
                             </span>
                         </form>
                         </div>
+                                                        <div class="text-center">
+                                    <button type="submit" class="btn btn-primary" style="margin: 50px 100px 0px 0px;">
+                                        <i class="fa fa-btn fa-sign-in"></i>Login
+                                    </button>
+                                    <button type="submit" class="btn btn-primary" style="margin: 50px 0px 0px 0px;">
+                                        <i class="fa fa-btn fa-user"></i>Register
+                                    </button>
+                                </div>
                     </div>
             </div>
             </div>

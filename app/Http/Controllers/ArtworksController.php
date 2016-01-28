@@ -61,13 +61,14 @@ class ArtworksController extends Controller
 
         $artwork->save();
 
+
         if (isset($params['image'])) {
             # code...
             $imageName = $artwork->id . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->move('../public/img/art_images', $imageName);
 
             return redirect()->action('ArtworksController@index');
-        }
+        }     
 
         else {
             return redirect()->action('ArtworksController@index');

@@ -29,9 +29,16 @@
                         @foreach ($artworks as $artwork)
                             <tr>
                                 <!-- Showing all artworks -->
+                                @if (isset($artwork->image))
                                 <td class="table-text table-hover ">
                                     <div><img src="img/art_images/{{$artwork->id}}.png" style="width: 50px; max-height: 50px;"></div>
                                 </td>
+
+                                @else 
+                                <td class="table-text table-hover ">
+                                    <div><img src="img/art_images/image_unavailable.png" style="width: 50px; max-height: 50px;"></div>
+                                </td>
+                                @endif
 
 
                                 <td class="table-text">

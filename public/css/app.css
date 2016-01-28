@@ -31,8 +31,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 h2 {
   color: white; }
 
+.search-body {
+  height: 200px !important; }
+
 #search-container {
-  background: url(../img/black-bg.png) repeat center center fixed; }
+  background-color: white;
+  padding: 20px; }
 
 .panel {
   top: 150px; }
@@ -71,14 +75,17 @@ h2 {
   vertical-align: middle; }
 
 .search-body {
-  background: url(../img/black-bg.png) repeat center center fixed;
+  background-color: white;
   border: 0;
   opacity: 1;
   height: 150px; }
 
 body {
-  background: url(../img/art-background1.jpg) no-repeat center center fixed;
+  background: url(https://static.pexels.com/photos/3582/abstract-glare-visual-art.jpg) no-repeat center center fixed;
   background-size: cover; }
+
+.search-text {
+  color: black; }
 
 .table-text {
   font-family: Georgia; }
