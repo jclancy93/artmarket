@@ -9,7 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Auth\AuthController;
 
-class ArtworksController extends Controller
+class ArtworkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -67,11 +67,11 @@ class ArtworksController extends Controller
             $imageName = $artwork->id . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->move('../public/img/art_images', $imageName);
 
-            return redirect()->action('ArtworksController@index');
+            return redirect()->action('ArtworkController@index');
         }     
 
         else {
-            return redirect()->action('ArtworksController@index');
+            return redirect()->action('ArtworkController@index');
         }
 
     }
@@ -116,8 +116,13 @@ class ArtworksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+     public function destroy(Request $request, $id)
     {
-        //
+        $artwork = Artwork::find($id);
+
+        $artwork->delete();
+        
+        return redirect('/artworks');
     }
+
 }

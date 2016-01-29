@@ -17,10 +17,11 @@ class SearchController extends Controller
      */
     public function index(Request $request)
     {
+        // request search query term 
         $term = $request->input('query');
 
         if(isset($term)) {
-            $artworks = Artwork::search($term)->get();
+            $artworks = Artwork::where('artist', 'LIKE', '%'.$term.'%')->get();
         } else {
             $artworks = Artwork::all();
         }

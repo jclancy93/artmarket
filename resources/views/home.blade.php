@@ -5,7 +5,7 @@
     <div class="row row-fluid">
         <div class="col-md-10 col-md-offset-1" style="top: 300px;">
         @if (Auth::guest())
-            <div class="col-md-10 col-md-offset-1 search-body" style="margin-top: -90px; height: 200px">
+            <div class="col-md-10 col-md-offset-1 search-body" style="margin-top: -90px; height: 250px">
                 <div class="search">
                     <h2 class="text-center search-text">SEARCH ARTWORKS</h2>
                      <div id="custom-search-input">
@@ -18,7 +18,7 @@
                                 </button>
                             </span>
                         </form>
-                                <div class="text-center">
+                                <div class="text-center" style="margin-top: 50px;">
                                     <a href="{{ url('/login') }}">
                                     <button type="submit" class="login-button" style="margin-right: 100px;">
                                         Login

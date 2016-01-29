@@ -29,10 +29,10 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', 'HomeController@index');
     Route::resource('home', 'HomeController');
-	Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworksController@index']);
+	Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworkController@index']);
 	Route::get('search', ['middleware' => 'web', 'uses' => 'SearchController@index']);
-	Route::resource('artworks', 'ArtworksController');
-	Route::delete('/artworks/{id}', 'ArtworkController@destroy');
+	Route::resource('artworks', 'ArtworkController');
+	Route::delete('/artwork/{id}', 'ArtworkController@destroy');
 });
 
 Route::group(['middleware' => ['auth']], function () {
