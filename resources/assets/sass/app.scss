@@ -101,12 +101,16 @@ h2 {
 	opacity: 1;
 }
 
-body { 
+#app-layout { 
   background: url(https://static.pexels.com/photos/3582/abstract-glare-visual-art.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#app-layout1 { 
+	background-color: white;
 }
 
 .search-text {

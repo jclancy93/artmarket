@@ -1,9 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.app1')
 
 @section('content')
-    <!-- Create Task Form... -->
-
-    <!-- Current Tasks -->
     @if (count($artworks) > 0)
         <div class="panel panel-default" >
         <br>
@@ -22,6 +19,10 @@
                         <th style="font-size: 16px;">Artist</th>
                         <th style="font-size: 16px;">Price</th>
                         <th style="font-size: 16px;">Notes</th>
+                        @if (Auth::id() == 1) 
+                        <th></th>
+                        <th></th>
+                        @endif
                     </thead>
 
                     <!-- Table Body -->
@@ -29,7 +30,7 @@
                         @foreach ($artworks as $artwork)
                             <tr>
                                 <!-- Showing all artworks -->
-                                @if (isset($artwork->image))
+                                @if ($artwork->image === $artwork->id)
                                 <td class="table-text table-hover ">
                                     <div><img src="img/art_images/{{$artwork->id}}.png" style="width: 50px; max-height: 50px;"></div>
                                 </td>
@@ -75,12 +76,7 @@
                                         <button class="btn btn-info">DELETE</button>
                                     </form>
                                 </td>
-                                @else
                                 @endif
-
-                                <td>
-                                    <!-- TODO: Delete Button -->
-                                </td>
 
                             </tr>
                         @endforeach
@@ -88,5 +84,20 @@
                 </table>
             </div>
         </div>
+
+    @else 
+
+        <div class="panel panel-default" >
+        <br>
+        <br>
+        <br>
+        <br>
+         <h1 class="text-center" style="font-size: 40px;"> Artworks Index </h1>
+
+            <div class="panel-body">
+            <h5>There are no results for your query. Please try searching something else.</h5>
+            </div>
+        </div>
+
     @endif
 @endsection

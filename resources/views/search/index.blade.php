@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app1')
 
 @section('content')
     <!-- Create Task Form... -->
@@ -28,11 +28,17 @@
                     <tbody>
                         @foreach ($artworks as $artwork)
                             <tr>
-                                <!-- Showing all artworks -->
-                                    <td class="table-text table-hover ">
-                                        <div><img src="img/art_images/image_unavailable.png" style="width: 50px;" class="art_image"></div>
-                                    </td>
+                                @if ($artwork->image === $artwork->id)
+                                <td class="table-text table-hover ">
+                                    <div><img src="img/art_images/{{$artwork->id}}.png" style="width: 50px; max-height: 50px;"></div>
+                                </td>
 
+                                @else 
+                                <td class="table-text table-hover ">
+                                    <div><img src="img/art_images/image_unavailable.png" style="width: 50px; max-height: 50px;"></div>
+                                </td>
+                                @endif
+                                <!-- Showing all artworks -->
                                 <td class="table-text">
                                     <div>{{ $artwork->artist }}</div>
                                 </td>
@@ -65,5 +71,23 @@
                 </table>
             </div>
         </div>
+     @else 
+
+
+        <div class="panel panel-default" >
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="btn btn-default" href="{{ URL::previous() }}"><i class="fa fa-chevron-left"></i><strong>BACK TO SEARCH</strong></a>
+         <h1 class="text-center" style="font-size: 40px; letter-spacing: 3px;"><strong>ARTWORKS   INDEX</strong> </h1>
+
+            <div class="panel-body">
+            <h3 class="text-center">There are no results for your query. Please try searching something else.</h3>
+            </div>
+        </div>
+
     @endif
 @endsection

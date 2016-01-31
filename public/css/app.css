@@ -88,9 +88,12 @@ h2 {
   border: 0;
   opacity: 1; }
 
-body {
+#app-layout {
   background: url(https://static.pexels.com/photos/3582/abstract-glare-visual-art.jpg) no-repeat center center fixed;
   background-size: cover; }
+
+#app-layout1 {
+  background-color: white; }
 
 .search-text {
   color: black; }

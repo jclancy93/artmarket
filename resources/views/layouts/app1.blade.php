@@ -28,7 +28,7 @@
         }
     </style>
 </head>
-<body id="app-layout">
+<body id="app-layout1">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -79,6 +79,19 @@
                         </li>
                     @endif
                 </ul>
+
+		<div class="col-sm-3 col-md-3 pull-right">
+		<form class="navbar-form" role="search">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+			<span class="input-group-btn">
+                <button class="btn btn-danger" type="submit" style="margin-top: 0px;"><i class=" glyphicon glyphicon-search"></i></button>
+            </span>
+		</div>
+		</form>
+		</div>
+		
+	</div>
             </div>
         </div>
     </nav>
