@@ -31,7 +31,7 @@
                                     </a>
                                 </div>
         @else
-            <div class="col-md-10 col-md-offset-1 search-body" style="margin-top: -90px;">
+            <div class="col-md-10 col-md-offset-1 search-body" style="margin-top: -90px; height: 150px">
                 <div class="search">
                     <h2 class="text-center search-text">SEARCH ARTWORKS</h2>
                      <div id="custom-search-input">

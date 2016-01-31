@@ -74,6 +74,8 @@ class ArtworkController extends Controller
             return redirect()->action('ArtworkController@index');
         }
 
+        return redirect('/artworks');
+
     }
 
     /**
@@ -96,6 +98,8 @@ class ArtworkController extends Controller
     public function edit($id)
     {
         //
+         $artwork = Artwork::find($id);
+        return view('artworks.edit', ['artwork' => $artwork]);
     }
 
     /**
@@ -107,7 +111,17 @@ class ArtworkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $params = $request->input();
+
+        $artwork = Artwork::find($id);
+        $artwork->artist = $params['artist'];
+        $artwork->artwork = $params['artwork'];
+        $artwork->price = $params['price'];
+        $artwork->notes = $params['notes'];
+
+        $artwork->save();
+
+        return redirect('/artworks');
     }
 
     /**

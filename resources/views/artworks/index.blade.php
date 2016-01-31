@@ -65,7 +65,7 @@
                                 </td>
                                 @if (Auth::id() == 1)
                                 <td class="table-text">
-                                    <a href="{{ url('/artwork/edit/{id}') }}"><button class="btn btn-info">EDIT</button></a>
+                                    <a href="{{ url('/artwork/'.$artwork->id.'/edit') }}"><button class="btn btn-info">EDIT</button></a>
                                 </td>
                                 <td class="table-text">
                                     <form action="{{ url('artwork/'.$artwork->id) }}" method="POST">

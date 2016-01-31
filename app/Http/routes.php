@@ -33,6 +33,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('search', ['middleware' => 'web', 'uses' => 'SearchController@index']);
 	Route::resource('artworks', 'ArtworkController');
 	Route::delete('/artwork/{id}', 'ArtworkController@destroy');
+	Route::get('/artwork/{id}/edit', 'ArtworkController@edit');
 });
 
 Route::group(['middleware' => ['auth']], function () {
