@@ -7,7 +7,7 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" style="font-size: 40px;"> Artworks Index </h1>
+         <h1 class="text-center" style="font-size: 40px;"> Artists Index </h1>
 
             <div class="panel-body">
                 <table class="table table-hover">
@@ -92,7 +92,7 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" style="font-size: 40px;"> Artworks Index </h1>
+         <h1 class="text-center" style="font-size: 40px;"> Artists Index </h1>
 
             <div class="panel-body">
             <h5>There are no results for your query. Please try searching something else.</h5>

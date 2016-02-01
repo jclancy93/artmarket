@@ -53,7 +53,7 @@
                     <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">HOME</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTWORKS</a></li>
+                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
                 </ul>
                 @if (Auth::id() == 1)
                 <ul class="nav navbar-nav">
@@ -81,9 +81,9 @@
                 </ul>
 
 		<div class="col-sm-3 col-md-3 pull-right">
-		<form class="navbar-form" role="search">
+		<form class="navbar-form" role="search" action="/search" >
 		<div class="input-group">
-			<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+			<input type="text" class="form-control" placeholder="Search" name="query" id="srch-term">
 			<span class="input-group-btn">
                 <button class="btn btn-danger" type="submit" style="margin-top: 0px;"><i class=" glyphicon glyphicon-search"></i></button>
             </span>

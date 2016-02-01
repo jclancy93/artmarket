@@ -53,7 +53,7 @@
                     <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">HOME</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTWORKS</a></li>
+                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
                 </ul>
                 @if (Auth::id() == 1)
                 <ul class="nav navbar-nav">

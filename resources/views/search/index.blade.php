@@ -82,7 +82,7 @@
         <br>
         <br>
         <a class="btn btn-default" href="{{ URL::previous() }}"><i class="fa fa-chevron-left"></i><strong>BACK TO SEARCH</strong></a>
-         <h1 class="text-center" style="font-size: 40px; letter-spacing: 3px;"><strong>ARTWORKS   INDEX</strong> </h1>
+         <h1 class="text-center" style="font-size: 40px; letter-spacing: 3px;"><strong>ARTISTS   INDEX</strong> </h1>
 
             <div class="panel-body">
             <h3 class="text-center">There are no results for your query. Please try searching something else.</h3>
