@@ -12,6 +12,35 @@
         <br>
          <h1 class="text-center" style="font-size: 40px;"> Artworks Index </h1>
 
+        <div class="letter-index text-center">
+             <a href="{{ url('/search/?query=a') }}">A</a>
+             <a href="{{ url('/search/?query=b') }}">B</a>
+             <a href="{{ url('/search/?query=c') }}">C</a>
+             <a href="{{ url('/search/?query=d') }}">D</a>
+             <a href="{{ url('/search/?query=e') }}">E</a>
+             <a href="{{ url('/search/?query=f') }}">F</a>
+             <a href="{{ url('/search/?query=g') }}">G</a>
+             <a href="{{ url('/search/?query=h') }}">H</a>
+             <a href="{{ url('/search/?query=i') }}">I</a>
+             <a href="{{ url('/search/?query=j') }}">J</a>
+             <a href="{{ url('/search/?query=k') }}">K</a>
+             <a href="{{ url('/search/?query=l') }}">L</a>
+             <a href="{{ url('/search/?query=m') }}">M</a>
+             <a href="{{ url('/search/?query=n') }}">N</a>
+             <a href="{{ url('/search/?query=o') }}">O</a>
+             <a href="{{ url('/search/?query=p') }}">P</a>
+             <a href="{{ url('/search/?query=q') }}">Q</a>
+             <a href="{{ url('/search/?query=r') }}">R</a>
+             <a href="{{ url('/search/?query=s') }}">S</a>
+             <a href="{{ url('/search/?query=t') }}">T</a>
+             <a href="{{ url('/search/?query=u') }}">U</a>
+             <a href="{{ url('/search/?query=v') }}">V</a>
+             <a href="{{ url('/search/?query=w') }}">W</a>
+             <a href="{{ url('/search/?query=x') }}">X</a>
+             <a href="{{ url('/search/?query=y') }}">Y</a>
+             <a href="{{ url('/search/?query=z') }}">Z</a>
+        </div>
+
             <div class="panel-body">
                 <table class="table table-hover">
 

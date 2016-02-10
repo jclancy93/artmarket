@@ -21,13 +21,13 @@ class SearchController extends Controller
         $term = $request->input('query');
 
         if(isset($term)) {
-            $artworks = Artwork::where('artist', 'LIKE', '%'.$term.'%')->get();
+            $artworks = Artwork::where('artist', 'LIKE', $term.'%')->get();
         } else {
             $artworks = Artwork::all();
         }
 
         // Pass in articles data to view
-        return view('search.index', ['artworks' => $artworks, 'query' => $term]);
+        return view('search.index', ['artworks' => $artworks]);
     }
 
     /**

@@ -101,4 +101,11 @@ h2 {
 .table-text {
   font-family: Georgia; }
 
+.letter-index {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.letter-index > a {
+  margin-left: 15px; }
+
 /*# sourceMappingURL=app.css.map */
