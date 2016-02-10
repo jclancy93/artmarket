@@ -67,3 +67,11 @@
         </div>
     @endif
 @endsection
+
+@section('page-script')
+<script type="text/javascript">
+    $( document ).ready(function() {
+    alert( "ready!" );
+});
+</script>
+@stop
