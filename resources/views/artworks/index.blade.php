@@ -44,11 +44,14 @@
 
                     <!-- Table Headings -->
                     <thead>
-                        <th style="font-size: 16px;">Image</th>
-                        <th style="font-size: 16px;">Artwork</th>
+                        <th style="font-size: 16px;">Title</th>
                         <th style="font-size: 16px;">Artist</th>
+                        <th style="font-size: 16px;">Year</th>
+                        <th style="font-size: 16px;">Medium</th>
+                        <th style="font-size: 16px;">Art Fair</th>
+                        <th style="font-size: 16px;">Art Fair Date</th>
+                        <th style="font-size: 16px;">Gallery</th>
                         <th style="font-size: 16px;">Price</th>
-                        <th style="font-size: 16px;">Notes</th>
                         @if (Auth::id() == 1) 
                         <th></th>
                         <th></th>
@@ -60,25 +63,48 @@
                         @foreach ($artworks as $artwork)
                             <tr onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                 <!-- Showing all artworks -->
-                                @if ($artwork->image === $artwork->id)
+                                @if ($artwork->image != '')
                                 <td class="table-text table-hover ">
-                                    <div><img src="img/art_images/{{$artwork->id}}.png" style="width: 50px; max-height: 50px;"></div>
+                                    <div>
+                                        <img src="img/art_images/{{$artwork->id}}.png" style="width: 50px; max-height: 50px;">
+                                        <h5>{{ $artwork->artwork }}</h5>
+                                    </div>
                                 </td>
 
                                 @else 
                                 <td class="table-text table-hover ">
-                                    <div><img src="img/art_images/image_unavailable.png" style="width: 50px; max-height: 50px;"></div>
+                                    <div>
+                                        <img src="img/art_images/image_unavailable.png" style="width: 50px; max-height: 50px;">
+                                        <h5>{{ $artwork->artwork }}</h5>
+                                    </div>
                                 </td>
                                 @endif
 
 
                                 <td class="table-text">
                                     <div>{{ $artwork->artist }}</div>
+                                    <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: 'Didact Gothic', sans-serif;">SEE DETAILS</strong></a>
                                 </td>
 
                                 <td class="table-text">
-                                    <div>{{ $artwork->artwork }}</div>
+                                    <div>{{ $artwork->year }}</div>
                                 </td>
+
+                                <td class="table-text">
+                                    <div>{{ $artwork->medium }}</div>
+                                </td>
+
+                                <td class="table-text">
+                                    <div>{{ $artwork->art_fair }}</div>
+                                </td>  
+
+                                <td class="table-text">
+                                    <div>{{ $artwork->art_fair_year }}</div>
+                                </td>  
+
+                                <td class="table-text">
+                                    <div>{{ $artwork->gallery_name }}</div>
+                                </td>                                
 
                                 @if (Auth::guest())
                                      <td class="table-text">
@@ -91,10 +117,7 @@
                                     </td>
                                 @endif
 
-                                <td class="table-text">
-                                    <div>{{ $artwork->notes }}</div>
-                                </td>
-                                @if (Auth::id() == 1)
+                                @if (Auth::id() === 1)
                                 <td class="table-text">
                                     <a href="{{ url('/artwork/'.$artwork->id.'/edit') }}"><button class="btn btn-info">EDIT</button></a>
                                 </td>

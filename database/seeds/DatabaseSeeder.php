@@ -17,121 +17,75 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
+            'artist' => 'Damien Hirst',
+            'artwork' => 'Spin Painting',
+            'price' => '1000000',
+            'year' => '1965',
+            'art_fair' => 'Art Basel Hong Kong',
+            'art_fair_year' => 'April, 2014',
+            'gallery_name' => 'Gagosian Gallery',
             'image' => NULL,
-            'notes' => 'Warhol Paintin',
+            'notes' => 'Price is asking price',
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Manet',
-            'artwork' => 'Manet Paintin',
-            'price' => '$200',
+            'artist' => 'Damien Hirst',
+            'artwork' => 'Spin Painting',
+            'price' => '1000000',
+            'year' => '1965',
+            'art_fair' => 'Art Basel Hong Kong',
+            'art_fair_year' => 'April, 2014',
+            'gallery_name' => 'Gagosian Gallery',
             'image' => NULL,
-            'notes' => 'Manet Paintin so good',
+            'notes' => 'Price is asking price',
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
+            'artist' => 'Damien Hirst',
+            'artwork' => 'Spin Painting',
+            'price' => '1000000',
+            'year' => '1965',
+            'art_fair' => 'Art Basel Hong Kong',
+            'art_fair_year' => 'April, 2014',
+            'gallery_name' => 'Gagosian Gallery',
             'image' => NULL,
-            'notes' => 'Warhol Paintin',
+            'notes' => 'Price is asking price',
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
+            'artist' => 'Damien Hirst',
+            'artwork' => 'Spin Painting',
+            'price' => '1000000',
+            'year' => '1965',
+            'art_fair' => 'Art Basel Hong Kong',
+            'art_fair_year' => 'April, 2014',
+            'gallery_name' => 'Gagosian Gallery',
             'image' => NULL,
-            'notes' => 'Warhol Paintin',
+            'notes' => 'Price is asking price',
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
+            'artist' => 'Damien Hirst',
+            'artwork' => 'Spin Painting',
+            'price' => '1000000',
+            'year' => '1965',
+            'art_fair' => 'Art Basel Hong Kong',
+            'art_fair_year' => 'April, 2014',
+            'gallery_name' => 'Gagosian Gallery',
             'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
+            'notes' => 'Price is asking price',
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
+            'artist' => 'Damien Hirst',
+            'artwork' => 'Spin Painting',
+            'price' => '1000000',
+            'year' => '1965',
+            'art_fair' => 'Art Basel Hong Kong',
+            'art_fair_year' => 'April, 2014',
+            'gallery_name' => 'Gagosian Gallery',
             'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
-        ]);
-
-        DB::table('artworks')->insert([
-            'artist' => 'Warhol',
-            'artwork' => 'Warhol Paintin',
-            'price' => '$100',
-            'image' => NULL,
-            'notes' => 'Warhol Paintin',
+            'notes' => 'Price is asking price',
         ]);
     }
 }
