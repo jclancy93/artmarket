@@ -58,7 +58,7 @@
                     <!-- Table Body -->
                     <tbody>
                         @foreach ($artworks as $artwork)
-                            <tr>
+                            <tr onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                 <!-- Showing all artworks -->
                                 @if ($artwork->image === $artwork->id)
                                 <td class="table-text table-hover ">
