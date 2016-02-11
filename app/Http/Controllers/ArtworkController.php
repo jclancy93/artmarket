@@ -86,7 +86,9 @@ class ArtworkController extends Controller
      */
     public function show($id)
     {
-        //
+        //$artwork = Artwork::find($id);
+        $artwork = Artwork::find($id);
+        return view('artworks.show', ['artwork' => $artwork]);
     }
 
     /**

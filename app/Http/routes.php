@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworkController@index']);
 	Route::get('search', ['middleware' => 'web', 'uses' => 'SearchController@index']);
 	Route::resource('artworks', 'ArtworkController');
+	Route::get('/artwork/{id}', 'ArtworkController@show');
 });
 
 Route::group(['middleware' => ['auth']], function () {

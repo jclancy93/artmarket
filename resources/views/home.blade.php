@@ -11,16 +11,14 @@
                      <div id="custom-search-input">
                         <div class="input-group col-md-10 col-md-offset-1">
                         <form action="/search" method="GET">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                <span id="search_concept">Filter by</span> <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                              <li><a href="#">Contains</a></li>
-                              <li><a href="#">It's equal</a></li>
-                              <li><a href="#">Greather than </a></li>
-                              <li><a href="#">Less than  </a></li>
-                              <li><a href="#">Anything</a></li>
-                            </ul>
+                            <div class="input-group-btn search-panel">
+                                <select name="search_param" id="search_param" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <option value="all">Artist Name</option>
+                                    <option value="username">Username</option>
+                                    <option value="email">Email</option>
+                                    <option value="studentcode">Student Code</option>
+                                </select>
+                            </div>
                             <input type="text" id="query" name="query" class="search-query form-control" placeholder="Search by Artist Name, Fair Name, etc." style="margin-right:20px;" />
                             <span class="input-group-btn">
                                 <button class="btn btn-danger" type="submit">
