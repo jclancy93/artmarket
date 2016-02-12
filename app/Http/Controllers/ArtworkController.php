@@ -58,23 +58,21 @@ class ArtworkController extends Controller
         $artwork->artwork = $params['artwork'];
         $artwork->price = $params['price'];
         $artwork->notes = $params['notes'];
+        $artwork->year = $params['year'];
+
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+            $s3 = \Storage::disk('s3');
+            $filePath = $imageFileName;
+            $s3->put($filePath, file_get_contents($image), 'public');
+            $storagePath  = 'https://s3.amazonaws.com/artmarket-assets/' . $imageFileName;
+            $artwork->image = $storagePath;
+        }
 
         $artwork->save();
 
-
-        if (isset($params['image'])) {
-            # code...
-            $imageName = $artwork->id . '.' . $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->move('../public/img/art_images', $imageName);
-
-            return redirect()->action('ArtworkController@index');
-        }     
-
-        else {
-            return redirect()->action('ArtworkController@index');
-        }
-
-        return redirect('/artworks');
+        return redirect()->action('ArtworkController@index');
 
     }
 

@@ -15,6 +15,9 @@
 				<label for="artist">Artist</label>
 				<input id="artist" name="artist" type="text">
 				<br><br>
+				<label for="year">Year</label>
+				<input id="year" name="year" type="text">
+				<br><br>
 				<label for="price">Price</label>
 				<input id="price" name="price" type="text">
 				<br><br>

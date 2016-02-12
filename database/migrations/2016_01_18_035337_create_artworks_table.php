@@ -16,12 +16,12 @@ class CreateArtworksTable extends Migration
             $table->increments('id');
             $table->string('artist');
             $table->string('artwork');
-            $table->string('year');
+            $table->string('year')->nullable();
             $table->string('medium')->nullable();
-            $table->string('art_fair');
-            $table->string('art_fair_year');
-            $table->string('gallery_name');
-            $table->string('price');
+            $table->string('art_fair')->nullable();
+            $table->string('art_fair_year')->nullable();
+            $table->string('gallery_name')->nullable();
+            $table->string('price')->nullable();
             $table->string('image')->nullable();
             $table->string('notes');
             $table->nullableTimestamps();

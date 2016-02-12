@@ -19,7 +19,11 @@
            <h4>Notes: {{$artwork->notes}}</h4>
         </div>
         <div class="col-md-4 col-md-offset-1" style="top: 175px;">
-           <img src="/../../img/art_images/image_unavailable.png" style="width: 400px;">
+          @if ($artwork->image == '')
+            <img src="/../../img/art_images/image_unavailable.png" style="width: 400px;">
+          @else 
+            <img src="{{ $artwork->image }}" style="width: 400px">
+          @endif
         </div>
     </div>
 </div>

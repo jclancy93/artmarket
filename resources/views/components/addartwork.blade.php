@@ -8,6 +8,8 @@
 				<label for="artwork">Artwork Name</label>
 				<input id="artwork" name="artwork" type="text">
 				<label for="artist">Artist</label>
+				<input id="year" name="year" type="text">
+				<label for="year">Year</label>
 				<input id="artist" name="artist" type="text">
 				<label for="price">Price</label>
 				<input id="price" name="price" type="number">

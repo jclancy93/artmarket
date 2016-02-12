@@ -64,10 +64,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key'    => 'AKIAIWG323VV5QJ2CP3Q',
+            'secret' => '4mOWnZJvkWsJLQHZw+NvwXRkeEezAjYwPSMS/LZB',
+            'region' => 'us-east-1',
+            'bucket' => 'artmarket-assets',
         ],
 
         'rackspace' => [
