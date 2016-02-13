@@ -79,7 +79,7 @@
 
         <div class="col-lg-12 col-sm-12 col-12">
             <span class="file-input btn btn-block btn-primary btn-file">
-                Browse for Image Upload&hellip; <input type="file" multiple>
+                Browse for Image Upload&hellip; <input type="file" name="image" multiple>
             </span>
         </div>
         <br>
