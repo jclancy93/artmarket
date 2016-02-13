@@ -19,9 +19,10 @@ class SearchController extends Controller
     {
         // request search query term 
         $term = $request->input('query');
+        $dbField = $request->input('dbField');
 
         if(isset($term)) {
-            $artworks = Artwork::where('artist', 'LIKE', $term.'%')->get();
+            $artworks = Artwork::where($dbField, 'LIKE', '%'.$term.'%')->get();
         } else {
             $artworks = Artwork::all();
         }

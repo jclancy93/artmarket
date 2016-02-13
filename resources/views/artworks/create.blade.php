@@ -7,28 +7,95 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
- 			<form method="POST" action="/artworks" enctype="multipart/form-data" class="text-center">
- 				{!! csrf_field() !!}
-				<label for="artwork">Artwork Name</label>
-				<input id="artwork" name="artwork" type="text">
-				<br><br>
-				<label for="artist">Artist</label>
-				<input id="artist" name="artist" type="text">
-				<br><br>
-				<label for="year">Year</label>
-				<input id="year" name="year" type="text">
-				<br><br>
-				<label for="price">Price</label>
-				<input id="price" name="price" type="text">
-				<br><br>
-				<label for="notes">Description</label>
-				<input id="notes" name="notes" type="text">
-				<br><br>
-				<label for="image">image</label>
-				<input id="image" name="image" type="file" accept="image/png" style="margin-left: 35%;">
-				<br><br>
-				<input class="btn btn-info" type="submit" value="Add Product">
-			</form>
+ 			<form class="form-horizontal"  method="POST" role="form"  action="/artworks" enctype="multipart/form-data">
+        <fieldset>
+        	{!! csrf_field() !!}
+
+          <!-- Form Name -->
+          <legend class="text-center">Artwork Details</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Artist</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Artist" class="form-control" name="artist">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Artwork</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Title" class="form-control" name="artwork">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Gallery</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Gallery" class="form-control" name="gallery_name">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Medium</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Medium" class="form-control" name="medium">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Price</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Medium" class="form-control" name="price">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Year</label>
+            <div class="col-sm-4">
+              <input type="text" placeholder="Year" class="form-control" name="year">
+            </div>
+
+            <label class="col-sm-2 control-label" for="textinput">Fair Date</label>
+            <div class="col-sm-4">
+              <input type="text" placeholder="Fair Date" class="form-control" name="art_fair_year">
+            </div>
+          </div>
+
+
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Notes</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Notes" class="form-control" name="notes">
+            </div>
+          </div>
+
+
+        <div class="col-lg-12 col-sm-12 col-12">
+            <span class="file-input btn btn-block btn-primary btn-file">
+                Browse for Image Upload&hellip; <input type="file" multiple>
+            </span>
+        </div>
+        <br>
+        <br>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="submit" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
                 </div>
             </div>
         </div>

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "214ed6c21e5274e0ceb8304859026c78",
-    "content-hash": "dd54aff55844f43a620451aa166c0b9a",
+    "hash": "35287d3795fd35e6a19379f921fc1343",
+    "content-hash": "8b42267051062987d9208b7a47e5d810",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -614,16 +614,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.14",
+            "version": "v5.2.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ce63ba53d4891bdbb5e1aaeced1b5dd34edbc86f"
+                "reference": "78fafb78d35c617e24630f4e099746effc42c787"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ce63ba53d4891bdbb5e1aaeced1b5dd34edbc86f",
-                "reference": "ce63ba53d4891bdbb5e1aaeced1b5dd34edbc86f",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/78fafb78d35c617e24630f4e099746effc42c787",
+                "reference": "78fafb78d35c617e24630f4e099746effc42c787",
                 "shasum": ""
             },
             "require": {
@@ -738,7 +738,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-02-03 14:19:04"
+            "time": "2016-02-12 14:59:18"
         },
         {
             "name": "laravelcollective/html",
@@ -1518,6 +1518,59 @@
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
             "time": "2016-02-02 13:44:19"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "6605602690578496091ac20ec7a5cbd160d4dff4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/6605602690578496091ac20ec7a5cbd160d4dff4",
+                "reference": "6605602690578496091ac20ec7a5cbd160d4dff4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-01-27 05:14:46"
         },
         {
             "name": "symfony/debug",
@@ -3408,59 +3461,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2015-06-21 13:59:46"
-        },
-        {
-            "name": "symfony/css-selector",
-            "version": "v3.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "6605602690578496091ac20ec7a5cbd160d4dff4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/6605602690578496091ac20ec7a5cbd160d4dff4",
-                "reference": "6605602690578496091ac20ec7a5cbd160d4dff4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\CssSelector\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony CssSelector Component",
-            "homepage": "https://symfony.com",
-            "time": "2016-01-27 05:14:46"
         },
         {
             "name": "symfony/dom-crawler",

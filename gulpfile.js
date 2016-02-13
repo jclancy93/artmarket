@@ -18,3 +18,7 @@ elixir(function(mix) {
 elixir(function(mix) {
     mix.version('css/all.css');
 });
+
+elixir(function(mix) {
+mix.phpUnit()
+});

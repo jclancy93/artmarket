@@ -9,6 +9,27 @@
         <br>
          <h1 class="text-center" style="font-size: 40px;"> Artists Index </h1>
 
+         <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                  <div class="modal-dialog">
+                        <div class="loginmodal-container">
+                            <h1>ART MARKET</h1>
+                            <h4 class="text-center">Log In or Sign up to see auction results</h4>
+                          <form method="POST" action="{{ url('/login') }}">
+                          {!! csrf_field() !!}
+                            <input type="text" name="email" placeholder="Email">
+                            <input type="password" name="password" placeholder="Password">
+                            <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                          </form>
+                            
+                          <div class="login-help">
+                            <a href="#" class="login-modal-submit">Register</a> - <a href="#">Forgot Password</a>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
          <div class="letter-index text-center">
          <a href="{{ url('/search/?query=a') }}">A</a>
          <a href="{{ url('/search/?query=b') }}">B</a>
@@ -62,17 +83,17 @@
                         <!-- Table Body -->
                         <tbody>
                             @foreach ($artworks as $artwork)
-                                <tr onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
+                                <tr >
                                     <!-- Showing all artworks -->
                                     @if ($artwork->image == '')
-                                    <td class="table-text table-hover ">
+                                    <td class="table-text table-hover " onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>
                                             <h5>{{ $artwork->artwork }}</h5>
                                         </div>
                                     </td>
 
                                     @else 
-                                    <td class="table-text table-hover ">
+                                    <td class="table-text table-hover " onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>
                                             <img src="{{ $artwork->image }}" class="thumbnail">
                                             <h5>{{ $artwork->artwork }}</h5>
@@ -81,38 +102,38 @@
                                     @endif
 
 
-                                    <td class="table-text">
+                                    <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->artist }}</div>
                                         <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: 'Didact Gothic', sans-serif;">SEE DETAILS</strong></a>
                                     </td>
 
-                                    <td class="table-text">
+                                    <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->year }}</div>
                                     </td>
 
-                                    <td class="table-text">
+                                    <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->medium }}</div>
                                     </td>
 
-                                    <td class="table-text">
+                                    <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->art_fair }}</div>
                                     </td>  
 
-                                    <td class="table-text">
+                                    <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->art_fair_year }}</div>
                                     </td>  
 
-                                    <td class="table-text">
+                                    <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->gallery_name }}</div>
                                     </td>                                
 
                                     @if (Auth::guest())
                                          <td class="table-text">
-                                            <a href="{{ url('/login') }}"><button class="btn btn-info">Log in to see Prices</button></a>
+                                            <a href="#" data-toggle="modal" data-target="#login-modal"><button class="btn btn-info">Log in to see Prices</button></a>
                                         </td>
 
                                     @else
-                                        <td class="table-text">
+                                        <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                             <div>{{ $artwork->price }}</div>
                                         </td>
                                     @endif

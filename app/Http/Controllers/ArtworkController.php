@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;            // this handles both for Input and Request as in laravel 5.1 documentation
+
 
 use App\Artwork;
-use App\Http\Requests;
+use App\Http\Controllers\Input;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Auth\AuthController;
 
@@ -56,11 +57,15 @@ class ArtworkController extends Controller
         $artwork = new Artwork;
         $artwork->artist = $params['artist'];
         $artwork->artwork = $params['artwork'];
+        $artwork->year = $params['year'];
+        $artwork->gallery_name = $params['gallery_name'];
+        $artwork->medium = $params['medium'];
         $artwork->price = $params['price'];
+        $artwork->art_fair_year = $params['art_fair_year'];
         $artwork->notes = $params['notes'];
         $artwork->year = $params['year'];
 
-        if ($request->file('image')) {
+        if ($request->file('image1')) {
             $image = $request->file('image');
             $imageFileName = time() . '.' . $image->getClientOriginalExtension();
             $s3 = \Storage::disk('s3');
@@ -116,12 +121,30 @@ class ArtworkController extends Controller
         $artwork = Artwork::find($id);
         $artwork->artist = $params['artist'];
         $artwork->artwork = $params['artwork'];
+        $artwork->year = $params['year'];
+        $artwork->gallery_name = $params['gallery_name'];
+        $artwork->medium = $params['medium'];
         $artwork->price = $params['price'];
+        $artwork->art_fair_year = $params['art_fair_year'];
         $artwork->notes = $params['notes'];
+        $artwork->year = $params['year'];
+        $artwork->image = '';
+
+        if ($request->file('image1')) {
+            $files = $request->file('image1');
+            foreach ($files as $file) {
+                $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+                $s3 = \Storage::disk('s3');
+                $filePath = $imageFileName;
+                $s3->put($filePath, file_get_contents($image), 'public');
+                $storagePath  = 'https://s3.amazonaws.com/artmarket-assets/' . $imageFileName;
+                $artwork->image = $storagePath;
+            }
+        }
 
         $artwork->save();
 
-        return redirect('/artworks');
+        return redirect()->action('ArtworkController@index');
     }
 
     /**
