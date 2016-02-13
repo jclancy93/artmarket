@@ -5,7 +5,7 @@
 
     <!-- Current Tasks -->
     @if (count($artworks) > 0)
-        <div class="panel panel-default"    >
+        <div class="panel panel-default">
         <br>
         <br>
         <br>
