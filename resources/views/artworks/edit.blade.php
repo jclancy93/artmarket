@@ -54,6 +54,13 @@
             </div>
           </div>
 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Art Fair</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Art Fair" class="form-control" name="art_fair">
+            </div>
+          </div>
+
           <!-- Text input-->
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Year</label>

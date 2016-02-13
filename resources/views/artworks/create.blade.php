@@ -49,7 +49,14 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Price</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Medium" class="form-control" name="price">
+              <input type="text" placeholder="Price" class="form-control" name="price">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Art Fair</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Art Fair" class="form-control" name="art_fair">
             </div>
           </div>
 
