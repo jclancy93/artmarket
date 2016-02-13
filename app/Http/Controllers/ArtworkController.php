@@ -65,7 +65,7 @@ class ArtworkController extends Controller
         $artwork->notes = $params['notes'];
         $artwork->year = $params['year'];
 
-        if ($request->file('image1')) {
+        if ($request->file('image')) {
             $image = $request->file('image');
             $imageFileName = time() . '.' . $image->getClientOriginalExtension();
             $s3 = \Storage::disk('s3');
