@@ -131,15 +131,13 @@ class ArtworkController extends Controller
         $artwork->image = '';
 
         if ($request->file('image1')) {
-            $files = $request->file('image1');
-            foreach ($files as $file) {
+            $image = $request->file('image1');
                 $imageFileName = time() . '.' . $image->getClientOriginalExtension();
                 $s3 = \Storage::disk('s3');
                 $filePath = $imageFileName;
                 $s3->put($filePath, file_get_contents($image), 'public');
                 $storagePath  = 'https://s3.amazonaws.com/artmarket-assets/' . $imageFileName;
                 $artwork->image = $storagePath;
-            }
         }
 
         $artwork->save();
