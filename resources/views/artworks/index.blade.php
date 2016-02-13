@@ -20,7 +20,7 @@
                             <input type="password" name="password" placeholder="Password">
                             <input type="submit" name="login" class="login loginmodal-submit" value="Login">
                           </form>
-                          <button type="submit" name="login" class="login loginmodal-submit" value="Login" style="width: 100%;">Register</button>
+                          <button type="submit" name="login" class="login loginmodal-submit" value="Login" style="width: 100%;" onclick="location.href='{{ url('/register') }}'">Register</button>
                           <div class="login-help">
                             <a href="{{ url('/password/reset') }}">Forgot Password</a>
                           </div>
