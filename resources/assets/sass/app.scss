@@ -293,3 +293,15 @@ input[readonly] {
   background-color: white !important;
   cursor: text !important;
 }
+
+@media (max-width: 650px) {
+  .search-container {
+    width: 300px !important;
+  }
+
+  .drilldown-image {
+  width: 300px !important;
+  display: block;
+  margin: 0 auto;
+  }
+}

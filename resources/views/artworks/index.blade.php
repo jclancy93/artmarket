@@ -12,6 +12,7 @@
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                   <div class="modal-dialog">
                         <div class="loginmodal-container">
+                        <div onclick="$('#login-modal, .modal, .fade').hide();"><i class="fa fa-times fa-2x"></i></div>
                             <h1>ART MARKET</h1>
                             <h4 class="text-center">Log In or Sign up to see auction results</h4>
                           <form method="POST" action="{{ url('/login') }}">
@@ -29,30 +30,32 @@
                   </div>
 
          <div class="letter-index text-center" style="margin-bottom: 50px;">
-         <a href="{{ url('/search/?query=a&dbField=artist') }}">A</a>|
-         <a href="{{ url('/search/?query=b&dbField=artist') }}">B</a>|
-         <a href="{{ url('/search/?query=c&dbField=artist') }}">C</a>|
-         <a href="{{ url('/search/?query=d&dbField=artist') }}">D</a>|
-         <a href="{{ url('/search/?query=e&dbField=artist') }}">E</a>|
-         <a href="{{ url('/search/?query=f&dbField=artist') }}">F</a>|
-         <a href="{{ url('/search/?query=g&dbField=artist') }}">G</a>|
-         <a href="{{ url('/search/?query=h&dbField=artist') }}">H</a>|
-         <a href="{{ url('/search/?query=i&dbField=artist') }}">I</a>|
-         <a href="{{ url('/search/?query=j&dbField=artist') }}">J</a>|
-         <a href="{{ url('/search/?query=k&dbField=artist') }}">K</a>|
-         <a href="{{ url('/search/?query=l&dbField=artist') }}">L</a>|
-         <a href="{{ url('/search/?query=n&dbField=artist') }}">N</a>|
-         <a href="{{ url('/search/?query=o&dbField=artist') }}">O</a>|
-         <a href="{{ url('/search/?query=p&dbField=artist') }}">P</a>|
-         <a href="{{ url('/search/?query=q&dbField=artist') }}">Q</a>|
-         <a href="{{ url('/search/?query=r&dbField=artist') }}">R</a>|
-         <a href="{{ url('/search/?query=s&dbField=artist') }}">S</a>|
-         <a href="{{ url('/search/?query=t&dbField=artist') }}">T</a>|
-         <a href="{{ url('/search/?query=v&dbField=artist') }}">V</a>|
-         <a href="{{ url('/search/?query=w&dbField=artist') }}">W</a>|
-         <a href="{{ url('/search/?query=x&dbField=artist') }}">X</a>|
-         <a href="{{ url('/search/?query=y&dbField=artist') }}">Y</a>|
-         <a href="{{ url('/search/?query=z&dbField=artist') }}">Z</a>
+         <a href="{{ url('/search/?query=A&dbField=artist') }}">A</a>|
+         <a href="{{ url('/search/?query=B&dbField=artist') }}">B</a>|
+         <a href="{{ url('/search/?query=C&dbField=artist') }}">C</a>|
+         <a href="{{ url('/search/?query=D&dbField=artist') }}">D</a>|
+         <a href="{{ url('/search/?query=E&dbField=artist') }}">E</a>|
+         <a href="{{ url('/search/?query=F&dbField=artist') }}">F</a>|
+         <a href="{{ url('/search/?query=G&dbField=artist') }}">G</a>|
+         <a href="{{ url('/search/?query=H&dbField=artist') }}">H</a>|
+         <a href="{{ url('/search/?query=I&dbField=artist') }}">I</a>|
+         <a href="{{ url('/search/?query=J&dbField=artist') }}">J</a>|
+         <a href="{{ url('/search/?query=K&dbField=artist') }}">K</a>|
+         <a href="{{ url('/search/?query=L&dbField=artist') }}">L</a>|
+         <a href="{{ url('/search/?query=M&dbField=artist') }}">M</a>|
+         <a href="{{ url('/search/?query=N&dbField=artist') }}">N</a>|
+         <a href="{{ url('/search/?query=O&dbField=artist') }}">O</a>|
+         <a href="{{ url('/search/?query=P&dbField=artist') }}">P</a>|
+         <a href="{{ url('/search/?query=Q&dbField=artist') }}">Q</a>|
+         <a href="{{ url('/search/?query=R&dbField=artist') }}">R</a>|
+         <a href="{{ url('/search/?query=S&dbField=artist') }}">S</a>|
+         <a href="{{ url('/search/?query=U&dbField=artist') }}">U</a>|
+         <a href="{{ url('/search/?query=T&dbField=artist') }}">T</a>|
+         <a href="{{ url('/search/?query=V&dbField=artist') }}">V</a>|
+         <a href="{{ url('/search/?query=W&dbField=artist') }}">W</a>|
+         <a href="{{ url('/search/?query=X&dbField=artist') }}">X</a>|
+         <a href="{{ url('/search/?query=Y&dbField=artist') }}">Y</a>|
+         <a href="{{ url('/search/?query=Z&dbField=artist') }}">Z</a>
          </div>
 
 
