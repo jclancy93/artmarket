@@ -7,7 +7,8 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" style="font-size: 40px; margin-bottom:20px;"> Artists Index </h1>
+        <h1 class="text-center" style="font-size: 40px; font-family: Lato !important;"> ARTISTS INDEX </h1>
+
 
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                   <div class="modal-dialog">
@@ -129,7 +130,7 @@
                                     @if (Auth::guest())
                                          <td class="table-text">
                                          <br>
-                                            <a href="#" data-toggle="modal" data-target="#login-modal"><strong style="color: black; font-family: Roboto; font-weight: boldest; padding: 10px; border: 1px solid;">LOG IN TO SEE PRICES</strong></button></a>
+                                            <a href="#" data-toggle="modal" data-target="#login-modal"><button class="btn btn-info">LOG IN TO SEE PRICES</button></a>
                                         </td>
 
                                     @else
