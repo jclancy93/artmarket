@@ -128,7 +128,8 @@
 
                                     @if (Auth::guest())
                                          <td class="table-text">
-                                            <a href="#" data-toggle="modal" data-target="#login-modal"><strong style="color: black; font-family: Roboto; font-weight: boldest;">Log in to see Prices</strong></button></a>
+                                         <br>
+                                            <a href="#" data-toggle="modal" data-target="#login-modal"><strong style="color: black; font-family: Roboto; font-weight: boldest; padding: 10px; border: 1px solid;">LOG IN TO SEE PRICES</strong></button></a>
                                         </td>
 
                                     @else

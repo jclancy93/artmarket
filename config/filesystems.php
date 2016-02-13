@@ -64,10 +64,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => 'AKIAIWG323VV5QJ2CP3Q',
-            'secret' => '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',
+            'key'    => env('AWS_KEY'),
+            'secret' => env('AWS_SECRET'),
             'region' => 'us-east-1',
-            'bucket' => 'artmarket-assets',
+            'bucket' => env('AWS_BUCKET'),
         ],
 
         'rackspace' => [

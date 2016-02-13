@@ -305,3 +305,8 @@ input[readonly] {
   margin: 0 auto;
   }
 }
+
+.table-text a:hover {
+  text-decoration: none;
+  color: blue !important;
+}

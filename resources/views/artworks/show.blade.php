@@ -32,8 +32,9 @@
            <hr>
            <h4>{{$artwork->art_fair}}</h4>
            <h4>{{$artwork->gallery_name}}</h4>
+           <br>
            @if (Auth::guest())
-           <a href="#" data-toggle="modal" data-target="#login-modal"><strong style="color: black; font-family: Roboto; font-weight: boldest;">Log in to see Prices</strong></button></a>
+           <a href="#" data-toggle="modal" data-target="#login-modal"><strong style="color: black; font-family: Roboto; font-weight: boldest; padding: 10px; border: 1px solid;">LOG IN TO SEE PRICES</strong></button></a>
            @else
            <h4>${{$artwork->price}}</h4>
            @endif
