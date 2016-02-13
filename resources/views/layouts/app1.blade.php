@@ -49,43 +49,45 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">HOME</a></li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
-                </ul>
-                @if (Auth::id() == 1)
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/artworks/create') }}" style="color: black; font-size: 16px;">ADD ARTWORK</a></li>
-                </ul>
-                @else
-                @endif
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}" style="color: black; font-size: 16px;">LOGIN</a></li>
-                        <li><a href="{{ url('/register') }}" style="color: black; font-size: 16px;">SIGN UP</a></li>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">HOME</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
+                    </ul>
+                    @if (Auth::id() == 1)
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/artworks/create') }}" style="color: black; font-size: 16px;">ADD ARTWORK</a></li>
+                    </ul>
                     @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: black; font-size: 20px; padding-bottom: 25px;">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
                     @endif
-                </ul>
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}" style="color: black; font-size: 16px;">LOGIN</a></li>
+                            <li><a href="{{ url('/register') }}" style="color: black; font-size: 16px;">SIGN UP</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: black; font-size: 20px; padding-bottom: 25px;">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                </div>
 
 		<div class="col-sm-3 col-md-3 pull-right">
 		<form class="navbar-form" role="search" action="/search" >
 		<div class="input-group">
 			<input type="text" class="form-control" placeholder="Search" name="query" id="srch-term">
 			<span class="input-group-btn">
-                <button class="btn btn-danger" type="submit" style="margin-top: 0px;"><i class=" glyphicon glyphicon-search"></i></button>
+                <button class="btn btn-primary" type="submit" style="margin-top: 0px;"><i class=" glyphicon glyphicon-search"></i></button>
             </span>
 		</div>
 		</form>

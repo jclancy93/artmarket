@@ -60,6 +60,7 @@ class ArtworkController extends Controller
         $artwork->year = $params['year'];
         $artwork->gallery_name = $params['gallery_name'];
         $artwork->medium = $params['medium'];
+        $artwork->art_fair = $params['art_fair'];
         $artwork->price = $params['price'];
         $artwork->art_fair_year = $params['art_fair_year'];
         $artwork->notes = $params['notes'];
@@ -123,6 +124,7 @@ class ArtworkController extends Controller
         $artwork->artwork = $params['artwork'];
         $artwork->year = $params['year'];
         $artwork->gallery_name = $params['gallery_name'];
+        $artwork->art_fair = $params['art_fair'];
         $artwork->medium = $params['medium'];
         $artwork->price = $params['price'];
         $artwork->art_fair_year = $params['art_fair_year'];
