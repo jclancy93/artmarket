@@ -22,7 +22,7 @@ class SearchController extends Controller
         $dbField = $request->input('dbField');
 
         if(isset($term)) {
-            $artworks = Artwork::where(strtolower($dbField), 'LIKE', '%'.$term.'%')->get();
+            $artworks = Artwork::where(strtolower($dbField), 'ILIKE', '%'.$term.'%')->get();
         } else {
             $artworks = Artwork::all();
         }
