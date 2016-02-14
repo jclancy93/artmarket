@@ -16,7 +16,7 @@
          <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                   <div class="modal-dialog">
                         <div class="loginmodal-container">
-                        <div onclick="$('#login-modal, .modal, .fade').hide();"><i class="fa fa-times fa-2x"></i></div>
+                        <div onclick="$('#login-modal, .modal, .fade').hide(); $(body).removeClass('modal-open')"><i class="fa fa-times fa-2x"></i></div>
                             <h1>ART MARKET</h1>
                             <h4 class="text-center">Log In or Sign up to see auction results</h4>
                           <form method="POST" action="{{ url('/login') }}">
