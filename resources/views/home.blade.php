@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div id="gradient"/>
 <div class="container">
     <div class="row row-fluid">
         <div class="search-container" class="col-md-6 col-md-offset-3" style="background-color: white; padding: 25px; height: 200px; width: 600px; position: absolute; top:0; bottom: 0; left: 0; right: 0; margin: auto;">
@@ -35,5 +36,6 @@
         </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

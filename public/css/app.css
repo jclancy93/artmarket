@@ -1,10 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 #app-layout {
-  background: url(https://static.pexels.com/photos/3582/abstract-glare-visual-art.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 #app-layout1 {
-  background-color: white; }
+  backgrund-color: white; }
 
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Didact Gothic', sans-serif !important; }
@@ -267,5 +266,16 @@ input[readonly] {
 .table-text a:hover {
   text-decoration: none;
   color: blue !important; }
+
+body {
+  background-color: #000000;
+  padding: 0px;
+  margin: 0px; }
+
+#gradient {
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px; }
 
 /*# sourceMappingURL=app.css.map */
