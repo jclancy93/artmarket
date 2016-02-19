@@ -20,10 +20,16 @@ class SearchController extends Controller
         // request search query term & field for search
         $term = $request->input('query');
         $dbField = $request->input('dbField');
-        $dbField = $request->input('sortBy');
+        if (isset($sortBy)) {
+           $sortBy = $request->input('sortBy');
+        }
+        else {
+            $sortBy = 'artist';
+        }
+        
 
         if(isset($term)) {
-            $artworks = Artwork::where(strtolower($dbField), 'ILIKE', '%'.$term.'%')->orderBy($sortBy, 'desc')
+            $artworks = Artwork::where(strtolower($dbField), 'LIKE', '%'.$term.'%')->orderBy($sortBy, 'desc')
                 ->get();
         } else {
             $artworks = Artwork::all();
