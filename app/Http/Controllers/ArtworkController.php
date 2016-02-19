@@ -65,6 +65,9 @@ class ArtworkController extends Controller
         $artwork->art_fair_year = $params['art_fair_year'];
         $artwork->notes = $params['notes'];
         $artwork->year = $params['year'];
+        $artwork->category = $params['category'];
+        $artwork->dimensions = $params['dimensions'];
+
 
         if ($request->file('image')) {
             $image = $request->file('image');

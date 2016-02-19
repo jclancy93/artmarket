@@ -17,12 +17,14 @@ class SearchController extends Controller
      */
     public function index(Request $request)
     {
-        // request search query term 
+        // request search query term & field for search
         $term = $request->input('query');
         $dbField = $request->input('dbField');
+        $dbField = $request->input('sortBy');
 
         if(isset($term)) {
-            $artworks = Artwork::where(strtolower($dbField), 'ILIKE', '%'.$term.'%')->get();
+            $artworks = Artwork::where(strtolower($dbField), 'ILIKE', '%'.$term.'%')->orderBy($sortBy, 'desc')
+                ->get();
         } else {
             $artworks = Artwork::all();
         }

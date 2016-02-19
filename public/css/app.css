@@ -278,4 +278,7 @@ body {
   padding: 0px;
   margin: 0px; }
 
+.see-details-btn:hover {
+  color: purple !important; }
+
 /*# sourceMappingURL=app.css.map */

@@ -22,6 +22,7 @@ class CreateArtworksTable extends Migration
             $table->string('art_fair')->nullable();
             $table->string('art_fair_year')->nullable();
             $table->string('gallery_name')->nullable();
+            $table->string('dimensions')->nullable();
             $table->string('price')->nullable();
             $table->string('image')->nullable();
             $table->string('notes')->nullable();

@@ -8,7 +8,7 @@
         <br>
         <br>
          <h1 class="text-center" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
-         
+
          <div class="letter-index text-center" style="margin-bottom: 50px;">
          <a href="{{ url('/search/?query=A&dbField=artist') }}">A</a>|
          <a href="{{ url('/search/?query=B&dbField=artist') }}">B</a>|
@@ -101,7 +101,7 @@
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->artist }}</div>
-                                        <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: Lato; color: black">SEE DETAILS</strong></a>
+                                        <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: Lato; color: black" class="see-details-btn">SEE DETAILS</strong></a>
                                     </td>
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">

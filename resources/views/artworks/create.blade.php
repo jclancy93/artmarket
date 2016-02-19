@@ -46,6 +46,22 @@
             </div>
           </div>
 
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Dimensions</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Medium" class="form-control" name="dimensions">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Category</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Medium" class="form-control" name="category">
+            </div>
+          </div>
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Price</label>
             <div class="col-sm-10">
@@ -83,6 +99,13 @@
             </div>
           </div>
 
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Citation</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Notes" class="form-control" name="citation">
+            </div>
+          </div>
 
         <div class="col-lg-12 col-sm-12 col-12">
             <span class="file-input btn btn-block btn-primary btn-file">

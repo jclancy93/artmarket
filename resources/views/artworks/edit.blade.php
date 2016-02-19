@@ -19,7 +19,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Artist</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Artist" class="form-control" name="artist">
+              <input type="text" placeholder="Arist" value="{{$artwork->artist}}" class="form-control" name="artist">
             </div>
           </div>
 
@@ -27,7 +27,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Artwork</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Title" class="form-control" name="artwork">
+              <input type="text" placeholder="Title" value="{{$artwork->artwork}}" class="form-control" name="artwork">
             </div>
           </div>
 
@@ -35,7 +35,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Gallery</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Gallery" class="form-control" name="gallery_name">
+              <input type="text" placeholder="Gallery" value="{{$artwork->gallery_name}}" class="form-control" name="gallery_name">
             </div>
           </div>
 
@@ -43,21 +43,21 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Medium</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Medium" class="form-control" name="medium">
+              <input type="text" placeholder="Medium" class="form-control" value="{{$artwork->medium}}" name="medium">
             </div>
-          </div>
+          </div> 
 
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Price</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Medium" class="form-control" name="price">
+              <input type="text" placeholder="Medium" class="form-control" value="{{$artwork->price}}" name="price">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Art Fair</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Art Fair" class="form-control" name="art_fair">
+              <input type="text" placeholder="Art Fair" class="form-control" value="{{$artwork->art_fair}}" name="art_fair">
             </div>
           </div>
 
@@ -65,12 +65,12 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Year</label>
             <div class="col-sm-4">
-              <input type="text" placeholder="Year" class="form-control" name="year">
+              <input type="text" placeholder="Year" class="form-control" value="{{$artwork->year}}" name="year">
             </div>
 
             <label class="col-sm-2 control-label" for="textinput">Fair Date</label>
             <div class="col-sm-4">
-              <input type="text" placeholder="Fair Date" class="form-control" name="art_fair_year">
+              <input type="text" placeholder="Fair Date" class="form-control" value="{{$artwork->art_fair_year}}" name="art_fair_year">
             </div>
           </div>
 
@@ -80,7 +80,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Notes</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Notes" class="form-control" name="notes">
+              <input type="text" placeholder="Notes" class="form-control" name="notes" value="{{$artwork->notes}}">
             </div>
           </div>
 
