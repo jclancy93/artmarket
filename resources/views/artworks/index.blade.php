@@ -7,7 +7,7 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
+         <h1 class="text-center" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> ARTIST INDEX</h1>
 
          <div class="letter-index text-center" style="margin-bottom: 50px;">
          <a href="{{ url('/search/?query=A&dbField=artist') }}">A</a>|
