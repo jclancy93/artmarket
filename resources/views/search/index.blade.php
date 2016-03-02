@@ -46,7 +46,7 @@
         <div class="form-group">
             <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px;">
              <strong>Sort By:</strong>
-                 <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato">
+                 <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato" name="sortTerm">
                      <option value="artist">None</option>
                      <option value="artist" selected="selected">Artist</option>
                      <option value="artwork">Title</option>

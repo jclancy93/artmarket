@@ -31,17 +31,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="/js/url.js"></script>
     <script type="text/javascript">
+    var url = location.href.toString();
+    var oldParam = purl(url).param('sortBy');
     function sortBy (value) {
         if(document.URL.indexOf('sortBy') == -1) {
             var data = window.location + '&sortBy=' + value; 
             window.location = data;
         } else {
-            var url = location.href.toString();
-            var oldParam = purl(url).param('sortBy');
             url = url.replace('sortBy=' + oldParam, 'sortBy=' + value);
             window.location = url;
+            return value;
         } 
-    }
+    };
+    $(document).ready(function() {
+        $("select[name='sortTerm']").find("option[value='"+oldParam+"']").prop("selected",true);
+    });
     </script>
 </head>
 <body class="app-layout1">
