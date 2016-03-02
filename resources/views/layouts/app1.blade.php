@@ -14,6 +14,7 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/app.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
@@ -27,6 +28,21 @@
             margin-right: 6px;
         }
     </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/url.js"></script>
+    <script type="text/javascript">
+    function sortBy (value) {
+        if(document.URL.indexOf('sortBy') == -1) {
+            var data = window.location + '&sortBy=' + value; 
+            window.location = data;
+        } else {
+            var url = location.href.toString();
+            var oldParam = purl(url).param('sortBy');
+            url = url.replace('sortBy=' + oldParam, 'sortBy=' + value);
+            window.location = url;
+        } 
+    }
+    </script>
 </head>
 <body class="app-layout1">
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -102,8 +118,8 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
     <script type="text/javascript">
         $(document).ready(function() {

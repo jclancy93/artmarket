@@ -27,7 +27,7 @@ class SearchController extends Controller
         
 
         if(isset($term)) {
-            $artworks = Artwork::where(strtolower($dbField), 'LIKE', '%'.$term.'%')->orderBy($sortBy, 'asc')->get();
+            $artworks = Artwork::where(strtolower($dbField), 'LIKE', '%'.$term.'%')->orderBy($sortBy, 'desc')->get();
         } else {
             $artworks = Artwork::all();
         }

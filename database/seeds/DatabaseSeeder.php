@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         DB::table('artworks')->insert([
-            'artist' => 'Damien Hirst',
+            'artist_firstname' => 'Damien',
+            'artist_lastname' => 'Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -29,7 +30,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Damien Hirst',
+            'artist_firstname' => 'Damien',
+            'artist_lastname' => 'Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -41,7 +43,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Damien Hirst',
+            'artist_firstname' => 'Damien',
+            'artist_lastname' => 'Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -53,7 +56,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Damien Hirst',
+            'artist_firstname' => 'Damien',
+            'artist_lastname' => 'Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -65,7 +69,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Damien Hirst',
+            'artist_firstname' => 'Damien',
+            'artist_lastname' => 'Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -77,7 +82,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('artworks')->insert([
-            'artist' => 'Damien Hirst',
+            'artist_firstname' => 'Damien',
+            'artist_lastname' => 'Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',

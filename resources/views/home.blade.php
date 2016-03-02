@@ -4,14 +4,14 @@
 <div id="gradient"/>
 <div class="container">
     <div class="row row-fluid">
-        <div class="search-container" class="col-md-6 col-md-offset-3" style="background-color: white; padding: 25px; height: 200px; width: 600px; position: absolute; top:0; bottom: 0; left: 0; right: 0; margin: auto;">
+        <div class="search-container" class="col-md-6 col-md-offset-3" style="background-color: white; padding: 25px; height: 250px; width: 600px; position: absolute; top:0; bottom: 0; left: 0; right: 0; margin: auto;">
         <h2 class="text-center search-text">SEARCH ARTWORKS</h2>
         <div class="input-group" id="adv-search">
                 <input type="text" class="form-control" placeholder="Search by Artist Name, Art Fair, etc." id="query" name="query" form="searchForm"/>
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                        <div class="dropdown dropdown-lg open">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
                                 <form class="form-horizontal" role="form" id="searchForm" action="/search" method="GET">
                                   <div class="form-group">

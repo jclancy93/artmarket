@@ -16,9 +16,17 @@
 
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="textinput">Artist</label>
+            <label class="col-sm-2 control-label" for="textinput">Artist First Name</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Artist" class="form-control" name="artist">
+              <input type="text" placeholder="Artist first name" class="form-control" name="artist_firstname">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Artist Lat Name</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Artist last name" class="form-control" name="artist_lastname">
             </div>
           </div>
 
@@ -118,7 +126,7 @@
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
-                <button type="submit" class="btn btn-default">Cancel</button>
+                <a href="{{ url('/artworks') }}" class="btn btn-default">Cancel</a>
                 <button type="submit" class="btn btn-primary">Save</button>
               </div>
             </div>

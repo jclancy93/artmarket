@@ -7,35 +7,43 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> ARTIST INDEX</h1>
+         <h1 class="text-center" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> ARTIST_lastname INDEX</h1>
 
          <div class="letter-index text-center" style="margin-bottom: 50px;">
-         <a href="{{ url('/search/?query=A&dbField=artist') }}">A</a>|
-         <a href="{{ url('/search/?query=B&dbField=artist') }}">B</a>|
-         <a href="{{ url('/search/?query=C&dbField=artist') }}">C</a>|
-         <a href="{{ url('/search/?query=D&dbField=artist') }}">D</a>|
-         <a href="{{ url('/search/?query=E&dbField=artist') }}">E</a>|
-         <a href="{{ url('/search/?query=F&dbField=artist') }}">F</a>|
-         <a href="{{ url('/search/?query=G&dbField=artist') }}">G</a>|
-         <a href="{{ url('/search/?query=H&dbField=artist') }}">H</a>|
-         <a href="{{ url('/search/?query=I&dbField=artist') }}">I</a>|
-         <a href="{{ url('/search/?query=J&dbField=artist') }}">J</a>|
-         <a href="{{ url('/search/?query=K&dbField=artist') }}">K</a>|
-         <a href="{{ url('/search/?query=L&dbField=artist') }}">L</a>|
-         <a href="{{ url('/search/?query=M&dbField=artist') }}">M</a>|
-         <a href="{{ url('/search/?query=N&dbField=artist') }}">N</a>|
-         <a href="{{ url('/search/?query=O&dbField=artist') }}">O</a>|
-         <a href="{{ url('/search/?query=P&dbField=artist') }}">P</a>|
-         <a href="{{ url('/search/?query=Q&dbField=artist') }}">Q</a>|
-         <a href="{{ url('/search/?query=R&dbField=artist') }}">R</a>|
-         <a href="{{ url('/search/?query=S&dbField=artist') }}">S</a>|
-         <a href="{{ url('/search/?query=U&dbField=artist') }}">U</a>|
-         <a href="{{ url('/search/?query=T&dbField=artist') }}">T</a>|
-         <a href="{{ url('/search/?query=V&dbField=artist') }}">V</a>|
-         <a href="{{ url('/search/?query=W&dbField=artist') }}">W</a>|
-         <a href="{{ url('/search/?query=X&dbField=artist') }}">X</a>|
-         <a href="{{ url('/search/?query=Y&dbField=artist') }}">Y</a>|
-         <a href="{{ url('/search/?query=Z&dbField=artist') }}">Z</a>
+         <a href="{{ url('/search/?query=A&dbField=artist_lastname') }}">A</a>|
+         <a href="{{ url('/search/?query=B&dbField=artist_lastname') }}">B</a>|
+         <a href="{{ url('/search/?query=C&dbField=artist_lastname') }}">C</a>|
+         <a href="{{ url('/search/?query=D&dbField=artist_lastname') }}">D</a>|
+         <a href="{{ url('/search/?query=E&dbField=artist_lastname') }}">E</a>|
+         <a href="{{ url('/search/?query=F&dbField=artist_lastname') }}">F</a>|
+         <a href="{{ url('/search/?query=G&dbField=artist_lastname') }}">G</a>|
+         <a href="{{ url('/search/?query=H&dbField=artist_lastname') }}">H</a>|
+         <a href="{{ url('/search/?query=I&dbField=artist_lastname') }}">I</a>|
+         <a href="{{ url('/search/?query=J&dbField=artist_lastname') }}">J</a>|
+         <a href="{{ url('/search/?query=K&dbField=artist_lastname') }}">K</a>|
+         <a href="{{ url('/search/?query=L&dbField=artist_lastname') }}">L</a>|
+         <a href="{{ url('/search/?query=M&dbField=artist_lastname') }}">M</a>|
+         <a href="{{ url('/search/?query=N&dbField=artist_lastname') }}">N</a>|
+         <a href="{{ url('/search/?query=O&dbField=artist_lastname') }}">O</a>|
+         <a href="{{ url('/search/?query=P&dbField=artist_lastname') }}">P</a>|
+         <a href="{{ url('/search/?query=Q&dbField=artist_lastname') }}">Q</a>|
+         <a href="{{ url('/search/?query=R&dbField=artist_lastname') }}">R</a>|
+         <a href="{{ url('/search/?query=S&dbField=artist_lastname') }}">S</a>|
+         <a href="{{ url('/search/?query=U&dbField=artist_lastname') }}">U</a>|
+         <a href="{{ url('/search/?query=T&dbField=artist_lastname') }}">T</a>|
+         <a href="{{ url('/search/?query=V&dbField=artist_lastname') }}">V</a>|
+         <a href="{{ url('/search/?query=W&dbField=artist_lastname') }}">W</a>|
+         <a href="{{ url('/search/?query=X&dbField=artist_lastname') }}">X</a>|
+         <a href="{{ url('/search/?query=Y&dbField=artist_lastname') }}">Y</a>|
+         <a href="{{ url('/search/?query=Z&dbField=artist_lastname') }}">Z</a>
+         </div>
+         <div class="form-group">
+             <div class="form-control">
+                 <select onclick="var data=window.location+ '&sortBy=artist_lastname'; window.location = data;">
+                     <option>1</option>
+                     <option>2</option>
+                 </select>
+             </div>
          </div>
          <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                   <div class="modal-dialog">
@@ -64,7 +72,7 @@
                         <!-- Table Headings -->
                         <thead style="border-top: 2px solid #dfdfdf">
                             <th style="font-size: 12px;">TITLE</th>
-                            <th style="font-size: 12px;">ARTIST</th>
+                            <th style="font-size: 12px;">ARTIST_lastname</th>
                             <th style="font-size: 12px;">YEAR</th>
                             <th style="font-size: 12px;">MEDIUM</th>
                             <th style="font-size: 12px;">ART FAIR</th>
@@ -100,7 +108,7 @@
 
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
-                                        <div>{{ $artwork->artist }}</div>
+                                        <div>{{ $artwork->artist_firstname }} {{ $artwork->artist_lastname }}</div>
                                         <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: Lato; color: black" class="see-details-btn">SEE DETAILS</strong></a>
                                     </td>
 
@@ -163,7 +171,7 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" style="font-size: 40px;"> Artists Index </h1>
+         <h1 class="text-center" style="font-size: 40px;"> Artist_lastnames Index </h1>
 
             <div class="panel-body">
             <h5>There are no results for your query. Please try searching something else.</h5>
@@ -171,4 +179,6 @@
         </div>
 
     @endif
+    @push('scripts')
+    @endpush
 @endsection

@@ -55,7 +55,8 @@ class ArtworkController extends Controller
         $params = $request->input();
 
         $artwork = new Artwork;
-        $artwork->artist = $params['artist'];
+        $artwork->artist_firstname = $params['artist_firstname'];
+        $artwork->artist_lastname = $params['artist_lastname'];
         $artwork->artwork = $params['artwork'];
         $artwork->year = $params['year'];
         $artwork->gallery_name = $params['gallery_name'];
