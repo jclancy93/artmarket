@@ -10,7 +10,7 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
+         <h1 class="text-center" id="searchFor" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
          <h4 class="text-center" style="font-size: 20px; font-weight: 300; font-family: Lato !important;">Results for "{{{ Input::get('query') }}}"</h4>
 
          
@@ -43,15 +43,17 @@
          <a href="{{ url('/search/?query=Z&dbField=artist_lastname') }}">Z</a>
          </div>
 
+         <h4 style="font-family: Lato !important; margin-left: 30px;"><?php echo count($artworks)?> Results</h4>
+
         <div class="form-group">
-            <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px;">
+            <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px; font-family: Lato !important; ">
              <strong>Sort By:</strong>
                  <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato" name="sortTerm">
-                     <option value="artist">None</option>
-                     <option value="artist" selected="selected">Artist</option>
-                     <option value="artwork">Title</option>
-                     <option value="gallery_name">Gallery Name</option>
-                     <option value="year">Year</option>
+                     <option value="artist" style="font-family: Lato !important;">None</option>
+                     <option value="artist" style="font-family: Lato !important;">Artist</option>
+                     <option value="artwork" style="font-family: Lato !important;">Title</option>
+                     <option value="gallery_name" style="font-family: Lato !important;">Gallery Name</option>
+                     <option value="year" style="font-family: Lato !important;">Year</option>
                  </select>
              </div>
          </div>
@@ -195,6 +197,4 @@
         </div>
 
     @endif
-    @push('scripts')
-    @endpush
 @endsection

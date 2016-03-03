@@ -45,10 +45,13 @@
     };
     $(document).ready(function() {
         $("select[name='sortTerm']").find("option[value='"+oldParam+"']").prop("selected",true);
+        var text = $('#searchFor').text();
+        alert(text.toString().replace(/_/g, ' '));
+        $('#searchFor').innerHTML = text.toString().replace(/_/g, ' ');
     });
     </script>
 </head>
-<body class="app-layout1">
+<body class="app-layout1" style="background-color: #fff">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
