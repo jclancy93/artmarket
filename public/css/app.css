@@ -283,4 +283,12 @@ body {
 .see-details-btn:hover {
   color: purple !important; }
 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #gradient {
+    width: 100%;
+    height: 1000px;
+    padding: 0px;
+    margin: 0px; } }
+
 /*# sourceMappingURL=app.css.map */

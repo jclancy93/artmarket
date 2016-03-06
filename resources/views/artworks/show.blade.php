@@ -41,8 +41,7 @@
         </div>
         <div class="col-md-4 col-md-offset-1" style="top: 175px;">
            <h4>Medium: {{$artwork->medium}}</h4>
-           <h4>Materials: </h4>
-           <h4>Measurements: </h4>
+           <h4>Measurements: {{$artwork->dimensions}} </h4>
            <hr>
            <h4>Notes: {{$artwork->notes}}</h4>
         </div>

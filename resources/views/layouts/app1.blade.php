@@ -111,7 +111,7 @@
 		<form class="navbar-form" role="search" action="/search" >
 		<div class="input-group">
 			<input type="text" class="form-control" placeholder="Search" name="query" id="srch-term">
-            <input type="hidden" name="dbField" value="artist">
+            <input type="hidden" name="dbField" value="artist_lastname">
 			<span class="input-group-btn">
                 <button class="btn btn-primary" type="submit" style="margin-top: 0px;"><i class=" glyphicon glyphicon-search"></i></button>
             </span>

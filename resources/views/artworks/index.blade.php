@@ -44,8 +44,8 @@
             <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px; font-family: Lato !important; ">
              <strong>Sort By:</strong>
                  <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato" name="sortTerm">
-                     <option value="artist" style="font-family: Lato !important;">None</option>
-                     <option value="artist" style="font-family: Lato !important;">Artist</option>
+                     <option value="artist_lastname" style="font-family: Lato !important;">None</option>
+                     <option value="artist_lastname" style="font-family: Lato !important;">Artist</option>
                      <option value="artwork" style="font-family: Lato !important;">Title</option>
                      <option value="gallery_name" style="font-family: Lato !important;">Gallery Name</option>
                      <option value="year" style="font-family: Lato !important;">Year</option>
