@@ -10,8 +10,8 @@
         <br>
         <br>
         <br>
-         <h1 class="text-center" id="searchFor" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
-         <h4 class="text-center" style="font-size: 20px; font-weight: 300; font-family: Lato !important;">Results for "{{{ Input::get('query') }}}"</h4>
+         <h1 class="text-center col-sm-6" id="searchFor" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
+         <h4 class="text-center col-sm-6" style="font-size: 20px; font-weight: 300; font-family: Lato !important;">Results for "{{{ Input::get('query') }}}"</h4>
 
          
          <div class="letter-index text-center" style="margin-bottom: 50px;">
