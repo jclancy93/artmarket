@@ -43,9 +43,9 @@
          <a href="{{ url('/search/?query=Z&dbField=artist_lastname') }}">Z</a>
          </div>
 
-         <h4 class="col-sm-6" style="font-family: Lato !important; margin-left: 30px;"><?php echo count($artworks)?> Results</h4>
+         <h4 style="font-family: Lato !important; margin-left: 30px;"><?php echo count($artworks)?> Results</h4>
 
-        <div class="form-group col-sm-6">
+        <div class="form-group">
             <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px; font-family: Lato !important; ">
              <strong>Sort By:</strong>
                  <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato" name="sortTerm">
