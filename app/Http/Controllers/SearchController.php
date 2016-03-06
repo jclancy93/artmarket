@@ -22,7 +22,7 @@ class SearchController extends Controller
         $dbField = $request->input('dbField');
         $sortBy = $request->input('sortBy');
         if (is_null($sortBy)) {
-            $sortBy = 'artist';
+            $sortBy = 'artist_lastname';
         }
         
 

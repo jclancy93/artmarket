@@ -37,14 +37,22 @@
          <a href="{{ url('/search/?query=Y&dbField=artist_lastname') }}">Y</a>|
          <a href="{{ url('/search/?query=Z&dbField=artist_lastname') }}">Z</a>
          </div>
-         <div class="form-group">
-             <div class="form-control">
-                 <select onclick="var data=window.location+ '&sortBy=artist_lastname'; window.location = data;">
-                     <option>1</option>
-                     <option>2</option>
+
+         <h4 style="font-family: Lato !important; margin-left: 30px;"><?php echo count($artworks)?> Artworks</h4>
+
+        <div class="form-group">
+            <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px; font-family: Lato !important; ">
+             <strong>Sort By:</strong>
+                 <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato" name="sortTerm">
+                     <option value="artist" style="font-family: Lato !important;">None</option>
+                     <option value="artist" style="font-family: Lato !important;">Artist</option>
+                     <option value="artwork" style="font-family: Lato !important;">Title</option>
+                     <option value="gallery_name" style="font-family: Lato !important;">Gallery Name</option>
+                     <option value="year" style="font-family: Lato !important;">Year</option>
                  </select>
              </div>
          </div>
+
          <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                   <div class="modal-dialog">
                         <div class="loginmodal-container">
@@ -72,7 +80,7 @@
                         <!-- Table Headings -->
                         <thead style="border-top: 2px solid #dfdfdf">
                             <th style="font-size: 12px;">TITLE</th>
-                            <th style="font-size: 12px;">ARTIST_lastname</th>
+                            <th style="font-size: 12px;">ARTIST</th>
                             <th style="font-size: 12px;">YEAR</th>
                             <th style="font-size: 12px;">MEDIUM</th>
                             <th style="font-size: 12px;">ART FAIR</th>
@@ -179,6 +187,4 @@
         </div>
 
     @endif
-    @push('scripts')
-    @endpush
 @endsection

@@ -34,10 +34,14 @@
     var url = location.href.toString();
     var oldParam = purl(url).param('sortBy');
     function sortBy (value) {
-        if(document.URL.indexOf('sortBy') == -1) {
+        if (document.URL.indexOf('sortBy') == -1 && document.URL.indexOf('dbField') == -1) {
+            var data = window.location + '?query=&dbField=artist&sortBy=' + value; 
+            window.location = data;
+        }  else if (document.URL.indexOf('sortBy') == -1) {
             var data = window.location + '&sortBy=' + value; 
             window.location = data;
-        } else {
+        } 
+        else {
             url = url.replace('sortBy=' + oldParam, 'sortBy=' + value);
             window.location = url;
             return value;
@@ -46,10 +50,8 @@
     $(document).ready(function() {
         $("select[name='sortTerm']").find("option[value='"+oldParam+"']").prop("selected",true);
         var text = $('#searchFor').text();
-        alert(text.toString().replace(/_/g, ' '));
-        $('#searchFor').innerHTML = text.toString().replace(/_/g, ' ');
     });
-    </script>
+</script>
 </head>
 <body class="app-layout1" style="background-color: #fff">
     <nav class="navbar navbar-default navbar-fixed-top">

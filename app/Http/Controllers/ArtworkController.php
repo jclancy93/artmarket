@@ -17,11 +17,29 @@ class ArtworkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         // Return all Artworks
 
-        $artworks = Artwork::all();
+        $term = $request->input('query');
+        $dbField = $request->input('dbField');
+        $sortBy = $request->input('sortBy');
+        if (is_null($sortBy)) {
+            $sortBy = 'artist_lastname';
+        }
+        if (is_null($term)) {
+            $term = '';
+        }
+        if (is_null($dbField)) {
+            $dbField = 'artist_lastname';
+        }
+        
+
+        if(isset($term)) {
+            $artworks = Artwork::where(strtolower($dbField), 'LIKE', '%'.$term.'%')->orderBy($sortBy, 'asc')->get();
+        } else {
+            $artworks = Artwork::all();
+        }
 
         return view('artworks.index')->with('artworks', $artworks);
     }
