@@ -35,7 +35,7 @@
     var oldParam = purl(url).param('sortBy');
     function sortBy (value) {
         if (document.URL.indexOf('sortBy') == -1 && document.URL.indexOf('dbField') == -1) {
-            var data = window.location + '?query=&dbField=artist&sortBy=' + value; 
+            var data = window.location + '?query=&dbField=artist_lastname&sortBy=' + value; 
             window.location = data;
         }  else if (document.URL.indexOf('sortBy') == -1) {
             var data = window.location + '&sortBy=' + value; 
