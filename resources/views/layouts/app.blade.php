@@ -21,6 +21,7 @@
     <style>
         body {
             font-family: 'Lato';
+            overflow: hidden;
         }
 
         .fa-btn {

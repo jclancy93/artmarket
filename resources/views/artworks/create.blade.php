@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3" style="top: 175px;">
+        <div class="col-md-10 col-md-offset-1" style="top: 125px;">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
@@ -14,6 +14,7 @@
           <!-- Form Name -->
           <legend class="text-center">Artwork Details</legend>
 
+          <div class="col-md-6">
           <!-- Text input-->
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Artist First Name</label>
@@ -53,10 +54,12 @@
               <input type="text" placeholder="Medium" class="form-control" name="medium">
             </div>
           </div>
+          </div>
 
+          <div class="col-md-6">
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="textinput">Dimensions</label>
+            <label class="col-sm-2 control-label" for="textinput">Dimension</label>
             <div class="col-sm-10">
               <input type="text" placeholder="Dimensions" class="form-control" name="dimensions">
             </div>
@@ -114,6 +117,7 @@
               <input type="text" placeholder="Citation" class="form-control" name="citation">
             </div>
           </div>
+          </div>
 
         <div class="col-lg-12 col-sm-12 col-12">
             <span class="file-input btn btn-block btn-primary btn-file">
@@ -126,6 +130,7 @@
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
+              <br>
                 <a href="{{ url('/artworks') }}" class="btn btn-default">Cancel</a>
                 <button type="submit" class="btn btn-primary">Save</button>
               </div>
