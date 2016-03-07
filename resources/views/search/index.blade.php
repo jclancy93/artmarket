@@ -11,7 +11,7 @@
         <br>
         <br>
          <h1 class="text-center" id="searchFor" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
-         <h4 class="text-center" style="font-size: 20px; font-weight: 300; font-family: Lato !important;">Results for "{{{ Input::get('query') }}}"</h4>
+         <h4 class="text-center" style="font-size: 20px; font-weight: 300; font-family: Lato !important;"><?php echo count($artworks)?> Results for "{{{ Input::get('query') }}}"</h4>
 
          
          <div class="letter-index text-center" style="margin-bottom: 50px;">
@@ -42,8 +42,6 @@
          <a href="{{ url('/search/?query=Y&dbField=artist_lastname') }}">Y</a>|
          <a href="{{ url('/search/?query=Z&dbField=artist_lastname') }}">Z</a>
          </div>
-
-         <h4 style="font-family: Lato !important; margin-left: 30px;"><?php echo count($artworks)?> Results</h4>
 
         <div class="form-group">
             <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px; font-family: Lato !important; ">

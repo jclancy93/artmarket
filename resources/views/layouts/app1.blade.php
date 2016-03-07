@@ -47,10 +47,14 @@
             return value;
         } 
     };
-    $(document).ready(function() {
+    window.onload = function() {
         $("select[name='sortTerm']").find("option[value='"+oldParam+"']").prop("selected",true);
         var text = $('#searchFor').text();
-    });
+        var newText = text.replace("_", " ");
+        $('#searchFor').html(newText);
+        console.log(newText);
+
+    };
 </script>
 </head>
 <body class="app-layout1" style="background-color: #fff">
