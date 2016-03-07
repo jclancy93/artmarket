@@ -120,7 +120,7 @@
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
                                         <div>{{ $artwork->artist_firstname }} {{ $artwork->artist_lastname }}</div>
-                                        <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: Lato; color: black">SEE DETAILS</strong></a>
+                                        <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: Lato; color: black" class="see-details-btn">SEE DETAILS</strong></a>
                                     </td>
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">

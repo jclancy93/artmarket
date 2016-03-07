@@ -17,9 +17,17 @@
 
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="textinput">Artist</label>
+            <label class="col-sm-2 control-label" for="textinput">Artist First Name</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Arist" value="{{$artwork->artist}}" class="form-control" name="artist">
+              <input type="text" placeholder="Arist First Name" value="{{$artwork->artist_firstname}}" class="form-control" name="artist">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Artist Last Name</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Arist Last Name" value="{{$artwork->artist_lastname}}" class="form-control" name="artist">
             </div>
           </div>
 
@@ -46,6 +54,22 @@
               <input type="text" placeholder="Medium" class="form-control" value="{{$artwork->medium}}" name="medium">
             </div>
           </div> 
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Dimensions</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Dimensions" class="form-control" value="{{$artwork->dimensions}}" name="dimensions">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Category</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Category" class="form-control" name="category">
+            </div>
+          </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Price</label>
@@ -81,6 +105,14 @@
             <label class="col-sm-2 control-label" for="textinput">Notes</label>
             <div class="col-sm-10">
               <input type="text" placeholder="Notes" class="form-control" name="notes" value="{{$artwork->notes}}">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Citation</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Notes" class="form-control" name="citation">
             </div>
           </div>
 

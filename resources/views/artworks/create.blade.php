@@ -66,7 +66,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Category</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Medium" class="form-control" name="category">
+              <input type="text" placeholder="Category" class="form-control" name="category">
             </div>
           </div>
 
