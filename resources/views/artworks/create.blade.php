@@ -58,7 +58,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Dimensions</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Medium" class="form-control" name="dimensions">
+              <input type="text" placeholder="Dimensions" class="form-control" name="dimensions">
             </div>
           </div>
 
@@ -111,7 +111,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Citation</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Notes" class="form-control" name="citation">
+              <input type="text" placeholder="Citation" class="form-control" name="citation">
             </div>
           </div>
 

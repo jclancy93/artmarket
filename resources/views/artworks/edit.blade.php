@@ -67,7 +67,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Category</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Category" class="form-control" name="category">
+              <input type="text" placeholder="Category" class="form-control" name="category" value="{{$artwork->category}}">
             </div>
           </div>
 
@@ -112,7 +112,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Citation</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Notes" class="form-control" name="citation">
+              <input type="text" placeholder="Citation" class="form-control" name="citation" value="{{$artwork->citation}}">
             </div>
           </div>
 
