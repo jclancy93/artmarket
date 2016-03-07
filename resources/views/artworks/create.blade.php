@@ -24,7 +24,7 @@
 
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="textinput">Artist Lat Name</label>
+            <label class="col-sm-2 control-label" for="textinput">Artist Last Name</label>
             <div class="col-sm-10">
               <input type="text" placeholder="Artist last name" class="form-control" name="artist_lastname">
             </div>
