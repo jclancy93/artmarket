@@ -43,16 +43,18 @@
          <a href="{{ url('/search/?query=Z&dbField=artist_lastname') }}">Z</a>
          </div>
 
+         <?php $sortBy = !empty( $_GET['sortBy'] ) ? $_GET['sortBy'] : ''; ?>
+
         <div class="form-group">
             <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px; font-family: Lato !important; ">
              <strong>Sort By:</strong>
                  <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato" name="sortTerm">
                      <option value="artist_lastname" style="font-family: Lato !important;">None</option>
-                     <option value="artist_lastname" style="font-family: Lato !important;">Artist</option>
-                     <option value="artwork" style="font-family: Lato !important;">Title</option>
-                     <option value="gallery_name" style="font-family: Lato !important;">Gallery Name</option>
-                     <option value="year" style="font-family: Lato !important;">Year</option>
-                     <option value="art_fair_year" style="font-family: Lato !important;">Art Fair Date</option>
+                     <option value="artist_fullname" style="font-family: Lato !important;"<?php echo $sortBy == 'artist_fullname' ? 'selected' : ''; ?>>Artist</option>
+                     <option value="artwork" style="font-family: Lato !important;" <?php echo $sortBy == 'artwork' ? 'selected' : ''; ?>>Title</option>
+                     <option value="gallery_name" style="font-family: Lato !important;" <?php echo $sortBy == 'gallery_name' ? 'selected' : ''; ?>>Gallery Name</option>
+                     <option value="year" style="font-family: Lato !important;" <?php echo $sortBy == 'year' ? 'selected' : ''; ?>>Year</option>
+                     <option value="art_fair_year" style="font-family: Lato !important;" <?php echo $sortBy == 'art_fair_year' ? 'selected' : ''; ?>>Art Fair Date</option>
                  </select>
              </div>
          </div>

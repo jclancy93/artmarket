@@ -51,8 +51,6 @@
     };
 
     window.onload = function() {
-        alert(oldParam);
-        $("select[name='sortTerm']").find("option[value='"+oldParam+"']").prop("selected",true);
         var text = $('#searchFor').text();
         var newText = text.replace("_", " ");
         $('#searchFor').html(newText);
