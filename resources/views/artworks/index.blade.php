@@ -48,6 +48,7 @@
                      <option value="artwork" style="font-family: Lato !important;">Title</option>
                      <option value="gallery_name" style="font-family: Lato !important;">Gallery Name</option>
                      <option value="year" style="font-family: Lato !important;">Year</option>
+                     <option value="art_fair_year" style="font-family: Lato !important;">Art Fair Year</option>
                  </select>
              </div>
          </div>
@@ -115,7 +116,7 @@
 
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
-                                        <div>{{ $artwork->artist_firstname }} {{ $artwork->artist_lastname }}</div>
+                                        <div>{{$artwork->artist_fullname}}</div>
                                         <a href="{{ url('artwork/'.$artwork->id) }}"><strong style="font-family: Lato; color: black" class="see-details-btn">SEE DETAILS</strong></a>
                                     </td>
 
@@ -124,7 +125,7 @@
                                     </td>
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
-                                        <div>{{ $artwork->medium }}</div>
+                                        <div>{{ $artwork->category }}</div>
                                     </td>
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">

@@ -96,7 +96,7 @@
 
             <label class="col-sm-2 control-label" for="textinput">Fair Date</label>
             <div class="col-sm-4">
-              <input type="text" placeholder="Fair Date" class="form-control" name="art_fair_year">
+              <input type="text" placeholder="YYYY/MM/DD" class="form-control" name="art_fair_year">
             </div>
           </div>
 
@@ -145,3 +145,4 @@
     </div>
 </div>
 @endsection
+

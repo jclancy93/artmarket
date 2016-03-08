@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         DB::table('artworks')->insert([
             'artist_firstname' => 'Damien',
             'artist_lastname' => 'Hirst',
+            'artist_fullname' => 'Damien Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -32,6 +33,7 @@ class DatabaseSeeder extends Seeder
         DB::table('artworks')->insert([
             'artist_firstname' => 'Damien',
             'artist_lastname' => 'Hirst',
+            'artist_fullname' => 'Damien Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -45,6 +47,7 @@ class DatabaseSeeder extends Seeder
         DB::table('artworks')->insert([
             'artist_firstname' => 'Damien',
             'artist_lastname' => 'Hirst',
+            'artist_fullname' => 'Damien Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -58,6 +61,7 @@ class DatabaseSeeder extends Seeder
         DB::table('artworks')->insert([
             'artist_firstname' => 'Damien',
             'artist_lastname' => 'Hirst',
+            'artist_fullname' => 'Damien Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -71,6 +75,7 @@ class DatabaseSeeder extends Seeder
         DB::table('artworks')->insert([
             'artist_firstname' => 'Damien',
             'artist_lastname' => 'Hirst',
+            'artist_fullname' => 'Damien Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
@@ -84,11 +89,12 @@ class DatabaseSeeder extends Seeder
         DB::table('artworks')->insert([
             'artist_firstname' => 'Damien',
             'artist_lastname' => 'Hirst',
+            'artist_fullname' => 'Damien Hirst',
             'artwork' => 'Spin Painting',
             'price' => '1000000',
             'year' => '1965',
             'art_fair' => 'Art Basel Hong Kong',
-            'art_fair_year' => 'April, 2014',
+            'art_fair_year' => '2015/8/1',
             'gallery_name' => 'Gagosian Gallery',
             'image' => NULL,
             'notes' => 'Price is asking price',

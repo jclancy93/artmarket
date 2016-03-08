@@ -30,6 +30,8 @@
     </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="/js/url.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript">
     var url = location.href.toString();
     var oldParam = purl(url).param('sortBy');
@@ -47,13 +49,13 @@
             return value;
         } 
     };
+
     window.onload = function() {
+        alert(oldParam);
         $("select[name='sortTerm']").find("option[value='"+oldParam+"']").prop("selected",true);
         var text = $('#searchFor').text();
         var newText = text.replace("_", " ");
         $('#searchFor').html(newText);
-        console.log(newText);
-
     };
 </script>
 </head>
@@ -115,7 +117,7 @@
 		<form class="navbar-form" role="search" action="/search" >
 		<div class="input-group">
 			<input type="text" class="form-control" placeholder="Search" name="query" id="srch-term">
-            <input type="hidden" name="dbField" value="artist_lastname">
+            <input type="hidden" name="dbField" value="artist_fullname">
 			<span class="input-group-btn">
                 <button class="btn btn-primary" type="submit" style="margin-top: 0px;"><i class=" glyphicon glyphicon-search"></i></button>
             </span>
@@ -131,14 +133,8 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-    <script type="text/javascript">
-        $(document).ready(function() {
-            ('#app-layout').removeClass()
-        });
-    </script>
 
 
 </body>

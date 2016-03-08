@@ -75,17 +75,18 @@ class ArtworkController extends Controller
         $artwork = new Artwork;
         $artwork->artist_firstname = $params['artist_firstname'];
         $artwork->artist_lastname = $params['artist_lastname'];
+        $artwork->artist_fullname = $params['artist_firstname'] . " " . $params['artist_lastname'];
         $artwork->artwork = $params['artwork'];
+        $artwork->category = $params['category'];
         $artwork->year = $params['year'];
-        $artwork->gallery_name = $params['gallery_name'];
         $artwork->medium = $params['medium'];
         $artwork->art_fair = $params['art_fair'];
-        $artwork->price = $params['price'];
         $artwork->art_fair_year = $params['art_fair_year'];
-        $artwork->notes = $params['notes'];
-        $artwork->year = $params['year'];
-        $artwork->category = $params['category'];
+        $artwork->gallery_name = $params['gallery_name'];
         $artwork->dimensions = $params['dimensions'];
+        $artwork->price = $params['price'];
+        $artwork->notes = $params['notes'];
+        $artwork->citation = $params['citation'];
 
 
         if ($request->file('image')) {
@@ -142,18 +143,20 @@ class ArtworkController extends Controller
         $params = $request->input();
 
         $artwork = Artwork::find($id);
-        $artwork->artist_lastname = $params['artist_lastname'];
         $artwork->artist_firstname = $params['artist_firstname'];
+        $artwork->artist_lastname = $params['artist_lastname'];
+        $artwork->artist_fullname = $params['artist_firstname'] . " " . $params['artist_lastname'];
         $artwork->artwork = $params['artwork'];
+        $artwork->category = $params['category'];
         $artwork->year = $params['year'];
-        $artwork->gallery_name = $params['gallery_name'];
-        $artwork->art_fair = $params['art_fair'];
         $artwork->medium = $params['medium'];
-        $artwork->price = $params['price'];
+        $artwork->art_fair = $params['art_fair'];
         $artwork->art_fair_year = $params['art_fair_year'];
+        $artwork->gallery_name = $params['gallery_name'];
+        $artwork->dimensions = $params['dimensions'];
+        $artwork->price = $params['price'];
         $artwork->notes = $params['notes'];
-        $artwork->year = $params['year'];
-        $artwork->image = '';
+        $artwork->citation = $params['citation'];
 
         if ($request->file('image1')) {
             $image = $request->file('image1');

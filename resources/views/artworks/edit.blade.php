@@ -20,7 +20,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Artist First Name</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Arist First Name" value="{{$artwork->artist_firstname}}" class="form-control" name="artist">
+              <input type="text" placeholder="Arist First Name" value="{{$artwork->artist_firstname}}" class="form-control" name="artist_firstname">
             </div>
           </div>
 
@@ -28,7 +28,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Artist Last Name</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="Arist Last Name" value="{{$artwork->artist_lastname}}" class="form-control" name="artist">
+              <input type="text" placeholder="Arist Last Name" value="{{$artwork->artist_lastname}}" class="form-control" name="artist_lastname">
             </div>
           </div>
 
@@ -97,7 +97,7 @@
 
             <label class="col-sm-2 control-label" for="textinput">Fair Date</label>
             <div class="col-sm-4">
-              <input type="text" placeholder="Fair Date" class="form-control" value="{{$artwork->art_fair_year}}" name="art_fair_year">
+              <input type="text" placeholder="YYYY/MM/DD" class="form-control" value="{{$artwork->art_fair_year}}" name="art_fair_year">
             </div>
           </div>
 
