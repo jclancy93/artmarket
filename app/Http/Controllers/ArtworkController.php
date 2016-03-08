@@ -142,7 +142,8 @@ class ArtworkController extends Controller
         $params = $request->input();
 
         $artwork = Artwork::find($id);
-        $artwork->artist = $params['artist'];
+        $artwork->artist_lastname = $params['artist_lastname'];
+        $artwork->artist_firstname = $params['artist_firstname'];
         $artwork->artwork = $params['artwork'];
         $artwork->year = $params['year'];
         $artwork->gallery_name = $params['gallery_name'];

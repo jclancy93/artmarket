@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 use App\Artwork;
 use App\Http\Requests;
@@ -27,7 +28,15 @@ class SearchController extends Controller
         
 
         if(isset($term)) {
+            if ($sortBy='artist_lastname') {
+            $artworks = DB::table('artworks')
+                            ->select(DB::raw('CONCAT_WS(" ",`artist_firstname`,`artist_lastname`) as `wholename`,id'))
+                            ->having('wholename', 'LIKE', $term)
+                            ->first();
+            }
+            else {
             $artworks = Artwork::where(strtolower($dbField), 'ILIKE', '%'.$term.'%')->orderBy($sortBy, 'asc')->get();
+            }
         } else {
             $artworks = Artwork::all();
         }
