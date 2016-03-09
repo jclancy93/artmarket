@@ -63,6 +63,7 @@
            @else
            <h4>Price: {{$artwork->price}}</h4>
            @endif
+           <hr>
             <h4>Medium: {{$artwork->medium}}</h4>
            <h4>Category: {{$artwork->category}}</h4>
            <h4>Measurements: {{$artwork->dimensions}} </h4>
