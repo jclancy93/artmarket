@@ -26,7 +26,8 @@
         <div class="col-md-6" style="top: 175px; font-famiy: Lato !important">
               <a class="btn btn-default" href="{{ URL::previous() }}" style="margin-top: -100px;"><i class="fa fa-chevron-left"></i><strong>BACK TO SEARCH</strong></a>
 
-           <h4>{{$artwork->artist_firstname}} {{$artwork->artist_lastname}}</h4>
+         @if ($artwork->image == '')
+          <h4>{{$artwork->artist_firstname}} {{$artwork->artist_lastname}}</h4>
            <h4 style="font-style: italic; font-family: Lato"><strong>{{$artwork->artwork}}</strong></h4>
            <h4>Artwork Year: {{$artwork->year}}</h4>
            <hr>
@@ -48,14 +49,31 @@
            <hr>
            <h4>Notes: {{$artwork->notes}}</h4>
         </div>
-        <div class="row">
-         @if ($artwork->image == '')
          @else 
-          <div class="col-md-6 col-md-offset-3">
+                    <h4>{{$artwork->artist_firstname}} {{$artwork->artist_lastname}}</h4>
+           <h4 style="font-style: italic; font-family: Lato"><strong>{{$artwork->artwork}}</strong></h4>
+           <h4>Artwork Year: {{$artwork->year}}</h4>
+           <hr>
+           <h4>Art Fair Date: {{$artwork->art_fair}}{{$artwork->art_fair_date}}</h4>
+           <h4>Gallery Name: {{$artwork->gallery_name}}</h4>
+           <br>
+           @if (Auth::guest())
+           <a href="#" data-toggle="modal" data-target="#login-modal"><strong style="color: black; font-family: Roboto; font-weight: boldest; padding: 10px; border: 1px solid;">LOG IN TO SEE PRICES</strong></button></a>
+           <br>
+           @else
+           <h4>Price: {{$artwork->price}}</h4>
+           @endif
+            <h4>Medium: {{$artwork->medium}}</h4>
+           <h4>Category: {{$artwork->category}}</h4>
+           <h4>Measurements: {{$artwork->dimensions}} </h4>
+           <br>
+           <hr>
+           <h4>Notes: {{$artwork->notes}}</h4>
+        </div>
+        <div class="col-md-4 col-md-offset-1" style="top: 175px;">
             <img src="{{ $artwork->image }}" style="width: 400px">
-          </div>
+        </div>
          @endif
-         </div>
     </div>
 </div>
 @endsection
