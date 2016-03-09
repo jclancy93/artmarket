@@ -48,12 +48,14 @@
            <hr>
            <h4>Notes: {{$artwork->notes}}</h4>
         </div>
+        <div class="row">
          @if ($artwork->image == '')
          @else 
           <div class="col-md-6 col-md-offset-3">
             <img src="{{ $artwork->image }}" style="width: 400px">
           </div>
          @endif
+         </div>
     </div>
 </div>
 @endsection
