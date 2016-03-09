@@ -28,13 +28,13 @@ class SearchController extends Controller
 
         if(isset($term)) {
             if ($dbField == 'artist_lastname') {
-               $artworks = Artwork::where(strtolower($dbField), 'LIKE', ''.$term.'%')->orderBy($sortBy, 'asc')->get();
+               $artworks = Artwork::where(strtolower($dbField), 'ILIKE', ''.$term.'%')->orderBy($sortBy, 'asc')->get();
             }
             elseif ($dbField == 'art_fair_year') {
-               $artworks = Artwork::where(strtolower($dbField), 'LIKE', '%'.$term.'%')->orderBy($sortBy, 'asc')->get();
+               $artworks = Artwork::where(strtolower($dbField), 'ILIKE', '%'.$term.'%')->orderBy($sortBy, 'asc')->get();
             }
             else {
-            $artworks = Artwork::where(strtolower($dbField), 'LIKE', '%'.$term.'%')->orderBy($sortBy, 'asc')->get();
+            $artworks = Artwork::where(strtolower($dbField), 'ILIKE', '%'.$term.'%')->orderBy($sortBy, 'asc')->get();
         }
         } else {
             $artworks = Artwork::all();
