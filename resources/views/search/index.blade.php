@@ -88,7 +88,7 @@
                             <th style="font-size: 12px;">TITLE</th>
                             <th style="font-size: 12px;">ARTIST</th>
                             <th style="font-size: 12px;">YEAR</th>
-                            <th style="font-size: 12px;">MEDIUM</th>
+                            <th style="font-size: 12px;">CATEGORY</th>
                             <th style="font-size: 12px;">ART FAIR</th>
                             <th style="font-size: 12px;">ART FAIR DATE</th>
                             <th style="font-size: 12px;">GALLERY</th>

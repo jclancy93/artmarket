@@ -54,7 +54,7 @@
                  </select>
              </div>
          </div>
-         
+
 
          <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                   <div class="modal-dialog">
@@ -85,7 +85,7 @@
                             <th style="font-size: 12px;">TITLE</th>
                             <th style="font-size: 12px;">ARTIST</th>
                             <th style="font-size: 12px;">YEAR</th>
-                            <th style="font-size: 12px;">MEDIUM</th>
+                            <th style="font-size: 12px;">CATEGORY</th>
                             <th style="font-size: 12px;">ART FAIR</th>
                             <th style="font-size: 12px;">ART FAIR DATE</th>
                             <th style="font-size: 12px;">GALLERY</th>
@@ -136,7 +136,7 @@
                                     </td>  
 
                                     <td class="table-text" onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
-                                        <div>{{ $artwork->art_fair_year }}</div>
+                                        <div><?php echo date("M Y", strtotime($artwork->art_fair_year)); ?></div>
                                     </td>  
 
                                     <td class="table-text"onclick="location.href='{{ url('artwork/'.$artwork->id) }}'">
