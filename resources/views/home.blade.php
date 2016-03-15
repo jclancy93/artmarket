@@ -17,7 +17,7 @@
                 <input type="text" class="form-control" placeholder="Search by Artist Name, Art Fair, etc." id="auto" name="query" form="searchForm"/>
                 <!--{{ Form::open(array('url' => 'getdata', 'method' => 'POST')) }} 
                 {{ Form::text('query',$value = null, array('placeholder' => 'Please type a word or phrase', 'id' => 'auto', 'class' => 'form-control')) }}-->
-                {{ Form::close() }}
+                <!--{{ Form::close() }}-->
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg open">
