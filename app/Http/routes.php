@@ -45,5 +45,14 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('/artwork/{id}/edit', 'ArtworkController@edit');
 	Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworkController@index']);
 
+	Route::any('getdata', function() {
+		$term = Input::get('term');
+		$data = DB::table("artworks")->distinct()->select('artwork')->where('artwork', 'LIKE', $term.'%' )->groupBy('artwork')->take(10)->get();
+		foreach ($data as $v) {
+			$return_array[] = array('value' => $v->artwork);
+		}
+		return Response::json($return_array);
+	});
+
 
 });

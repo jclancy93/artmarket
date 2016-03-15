@@ -6,8 +6,18 @@
     <div class="row row-fluid">
         <div class="search-container" class="col-md-6 col-md-offset-3" style="background-color: white; padding: 25px; height: 250px; width: 600px; position: absolute; top:0; bottom: 0; left: 0; right: 0; margin: auto;">
         <h2 class="text-center search-text">SEARCH ARTWORKS</h2>
+        <div class="autocomplete">
+             <!--
+            {{ Form::open(array('url' => 'words/means/', 'class' => 'navbar-form navbar-left', 'method' => 'POST')) }}
+             {{ Form::submit('Submit', array('class' => 'btn btn-default')) }}
+             
+             -->
+        </div>
         <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Search by Artist Name, Art Fair, etc." id="query" name="query" form="searchForm"/>
+                <input type="text" class="form-control" placeholder="Search by Artist Name, Art Fair, etc." id="auto" name="query" form="searchForm"/>
+                <!--{{ Form::open(array('url' => 'getdata', 'method' => 'POST')) }} 
+                {{ Form::text('query',$value = null, array('placeholder' => 'Please type a word or phrase', 'id' => 'auto', 'class' => 'form-control')) }}-->
+                {{ Form::close() }}
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg open">
@@ -29,7 +39,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary" form="searchForm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                    </div>
+                    </div> 
                 </div>
             </div>
           </div>
