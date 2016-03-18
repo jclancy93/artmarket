@@ -28,6 +28,48 @@
         .fa-btn {
             margin-right: 6px;
         }
+        .ui-autocomplete { position: absolute; cursor: default; background:#FFF }   
+
+/* workarounds */
+html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+.ui-menu {
+    list-style:none;
+    padding: 2px;
+    margin: 0;
+    display:block;
+    float: left;
+    font-family: 'Lato' !important;
+    background-color: #fff !important;
+}
+.ui-menu .ui-menu {
+    margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+    margin:0;
+    padding: 0;
+    zoom: 1;
+    float: left;
+    clear: left;
+    width: 100%;
+    font-family: 'Lato' !important;
+    background-color: #fff !important;
+}
+.ui-menu .ui-menu-item a {
+    text-decoration:none;
+    display:block;
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
+    font-family: 'Lato' !important;
+    background-color: #fff !important;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px;
+    background-color: #fff !important;
+    text-decoration: underline !important;
+}
     </style>
 
 </head>

@@ -27,9 +27,9 @@
                                   <div class="form-group">
                                     <label for="filter">Filter by</label>
                                     <select class="form-control" name="dbField">
-                                        <option value="artist_fullname" selected>Artist Last Name</option>
+                                        <option value="artist_fullname">Artist Name</option>
                                         <option value="medium">Medium</option>
-                                        <option value="artwork">Artwork Name</option>
+                                        <option value="artwork" selected>Artwork Name</option>
                                         <option value="art_fair">Art Fair</option>
                                         <option value="gallery_name">Gallery Name</option>
                                     </select>
