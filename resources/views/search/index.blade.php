@@ -192,6 +192,35 @@
         <h1 class="text-center" id="searchFor" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> {{{ Input::get('dbField') }}} SEARCH RESULTS </h1>
          <h4 class="text-center" style="font-size: 20px; font-weight: 300; font-family: Lato !important;">Results for "{{{ Input::get('query') }}}"</h4>
 
+         <div class="letter-index text-center" style="margin-bottom: 50px;">
+         <a href="{{ url('/search/?query=A&dbField=artist_lastname') }}">A</a>|
+         <a href="{{ url('/search/?query=B&dbField=artist_lastname') }}">B</a>|
+         <a href="{{ url('/search/?query=C&dbField=artist_lastname') }}">C</a>|
+         <a href="{{ url('/search/?query=D&dbField=artist_lastname') }}">D</a>|
+         <a href="{{ url('/search/?query=E&dbField=artist_lastname') }}">E</a>|
+         <a href="{{ url('/search/?query=F&dbField=artist_lastname') }}">F</a>|
+         <a href="{{ url('/search/?query=G&dbField=artist_lastname') }}">G</a>|
+         <a href="{{ url('/search/?query=H&dbField=artist_lastname') }}">H</a>|
+         <a href="{{ url('/search/?query=I&dbField=artist_lastname') }}">I</a>|
+         <a href="{{ url('/search/?query=J&dbField=artist_lastname') }}">J</a>|
+         <a href="{{ url('/search/?query=K&dbField=artist_lastname') }}">K</a>|
+         <a href="{{ url('/search/?query=L&dbField=artist_lastname') }}">L</a>|
+         <a href="{{ url('/search/?query=M&dbField=artist_lastname') }}">M</a>|
+         <a href="{{ url('/search/?query=N&dbField=artist_lastname') }}">N</a>|
+         <a href="{{ url('/search/?query=O&dbField=artist_lastname') }}">O</a>|
+         <a href="{{ url('/search/?query=P&dbField=artist_lastname') }}">P</a>|
+         <a href="{{ url('/search/?query=Q&dbField=artist_lastname') }}">Q</a>|
+         <a href="{{ url('/search/?query=R&dbField=artist_lastname') }}">R</a>|
+         <a href="{{ url('/search/?query=S&dbField=artist_lastname') }}">S</a>|
+         <a href="{{ url('/search/?query=U&dbField=artist_lastname') }}">U</a>|
+         <a href="{{ url('/search/?query=T&dbField=artist_lastname') }}">T</a>|
+         <a href="{{ url('/search/?query=V&dbField=artist_lastname') }}">V</a>|
+         <a href="{{ url('/search/?query=W&dbField=artist_lastname') }}">W</a>|
+         <a href="{{ url('/search/?query=X&dbField=artist_lastname') }}">X</a>|
+         <a href="{{ url('/search/?query=Y&dbField=artist_lastname') }}">Y</a>|
+         <a href="{{ url('/search/?query=Z&dbField=artist_lastname') }}">Z</a>
+         </div>
+
             <div class="panel-body">
             <h3 class="text-center" style="font-family: Lato;">There are no results for your query. Please try searching something else.</h3>
             </div>
