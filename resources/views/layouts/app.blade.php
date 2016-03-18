@@ -104,7 +104,6 @@
      autoFocus: true,
      source: '{{URL('getdata')}}'
     });
-      $('.ui-autocomplete > li').css("background-color", "white");
     });
     </script>
 </body>
