@@ -47,7 +47,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::any('getdata', function() {
 		$term = Input::get('term');
-			$data = DB::table("artworks")->select('artist_fullname')->distinct()->where('artist_fullname', 'ILIKE', '%'.$term.'%' )->get();
+			$data = DB::table("artworks")->select('artist_fullname')->distinct()->where('artist_fullname', 'ILIKE', '%'.$term.'%' )->take(10)->get();
 			foreach ($data as $v) {
 				$return_array[] = array('value' => $v->artist_fullname);
 			}
