@@ -51,7 +51,7 @@
            <h4>Notes: {{$artwork->notes}}</h4>
         </div>
          @else 
-                    <h4>{{$artwork->artist_firstname}} {{$artwork->artist_lastname}}</h4>
+           <h4>{{$artwork->artist_firstname}} {{$artwork->artist_lastname}}</h4>
            <h4 style="font-style: italic; font-family: Lato"><strong>{{$artwork->artwork}}</strong></h4>
            <h4>Artwork Year: {{$artwork->year}}</h4>
            <hr>

@@ -46,15 +46,12 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('artworks', ['middleware' => 'web','uses' => 'ArtworkController@index']);
 
 	Route::any('getdata', function() {
-		$dbField = Input::get('dbField');
 		$term = Input::get('term');
-		if ($dbField == 'artist_fullname') {
-			$data = DB::table("artworks")->select('artist_fullname')->distinct()->where('artist_fullname', 'LIKE', '%'.$term.'%' )->take(10)->get();
+			$data = DB::table("artworks")->select('artist_fullname')->distinct()->where('artist_fullname', 'ILIKE', '%'.$term.'%' )->get();
 			foreach ($data as $v) {
 				$return_array[] = array('value' => $v->artist_fullname);
 			}
 			return Response::json($return_array);
-		}
 	});
 
 
