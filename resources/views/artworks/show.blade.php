@@ -31,7 +31,8 @@
            <h4 style="font-style: italic; font-family: Lato"><strong>{{$artwork->artwork}}</strong></h4>
            <h4>Artwork Year: {{$artwork->year}}</h4>
            <hr>
-           <h4>Art Fair Date: {{$artwork->art_fair}}{{$artwork->art_fair_date}}</h4>
+           <h4>Art Fair: {{$artwork->art_fair}}</h4>
+           <h4>Art Fair Date: <?php echo date("M Y", strtotime($artwork->art_fair_year)); ?></h4>
            <h4>Gallery Name: {{$artwork->gallery_name}}</h4>
            <br>
            @if (Auth::guest())
