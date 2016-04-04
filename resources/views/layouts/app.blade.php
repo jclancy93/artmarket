@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Art Market</title>
+    <title>Art Market Now</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -48,17 +48,17 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}" style="color: black; font-size: 30px">
-                    ART MARKET
+                    ART MARKET NOW
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">HOME</a></li>
+                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
+                    <li><a href="{{ url('/about') }}" style="color: black; font-size: 16px;">ABOUT</a></li>
                 </ul>
                 @if (Auth::id() == 1)
                 <ul class="nav navbar-nav">

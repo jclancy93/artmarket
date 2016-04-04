@@ -20,7 +20,7 @@
                 <!--{{ Form::close() }}-->
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg open">
+                        <div class="dropdown dropdown-lg">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
                                 <form class="form-horizontal" role="form" id="searchForm" action="/search" method="GET">

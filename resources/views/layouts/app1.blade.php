@@ -72,7 +72,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}" style="color: black; font-size: 30px">
-                    ART MARKET
+                    ART MARKET NOW
                 </a>
             </div>
 
@@ -80,10 +80,10 @@
                 <!-- Left Side Of Navbar -->
                 <div>
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/') }}" style="color: black; font-size: 16px;">HOME</a></li>
+                        <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
                     </ul>
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/artworks') }}" style="color: black; font-size: 16px;">ARTISTS</a></li>
+                        <li><a href="{{ url('/about') }}" style="color: black; font-size: 16px;">ABOUT</a></li>
                     </ul>
                     @if (Auth::id() == 1)
                     <ul class="nav navbar-nav">

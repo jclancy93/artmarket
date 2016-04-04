@@ -2,7 +2,7 @@
 
 @section('content')
     @if (count($artworks) > 0)
-        <div class="panel panel-default">
+        <div class="panel panel-default" id="desktop">
         <br>
         <br>
         <br>
@@ -174,6 +174,45 @@
                     </table>
                 </div>
             </div>
+        </div>
+        <div class="panel panel-default" id="mobile" style="margin-top: 120px;">
+        @foreach ($artworks as $artwork)
+        <div class="row row-fluid">
+            <div class="media">
+  
+
+                <div class="clearfix visible-sm"></div>
+
+                <div class="col-md-4">Yes</div>
+                <div class="media-body fnt-smaller col-md-8">
+                    <a href="#" target="_parent"></a>
+
+                    <h4 class="media-heading">
+                      <a href="#" target="_parent">{{$artwork->artwork}}</a>
+
+
+                    <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                        <li>4,820 SqFt</li>
+
+                        <li style="list-style: none">|</li>
+
+                        <li>5 Beds</li>
+
+                        <li style="list-style: none">|</li>
+
+                        <li>5 Baths</li>
+                    </ul>
+
+                    <p class="hidden-xs">Situated between fairmount
+                    park and the prestigious philadelphia cricket
+                    club, this beautiful 2+ acre property is truly
+                    ...</p><span class="fnt-smaller fnt-lighter fnt-arial">Courtesy of HS Fox & Roach-Chestnut Hill
+                    Evergreen</span>
+                </div>
+            </div>
+        </div><!-- End Listing-->
+        <hr>
+        @endforeach
         </div>
     @else 
 
