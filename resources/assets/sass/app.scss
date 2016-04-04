@@ -422,7 +422,6 @@ and (max-device-width : 1024px) {
     #mobile {
       display: block;
     }
-
 }
 
 @media only screen and (max-width: 560px) {
@@ -441,7 +440,6 @@ and (max-device-width : 1024px) {
     #desktop {
       display: none;
     }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -453,9 +451,11 @@ and (max-device-width : 1024px) {
     }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    #desktop {
-      display: none;
-    }
+@media only screen 
+and (min-device-width : 124px) 
+and (max-device-width : 560px) {
+  #desktop {
+    display: none;
+  }
 }
 
