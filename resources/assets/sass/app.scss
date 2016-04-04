@@ -425,6 +425,25 @@ and (max-device-width : 1024px) {
 
 }
 
+@media only screen and (max-width: 560px) {
+    #property-listings .property-listing {
+        padding: 5px!important;
+    }
+    #property-listings .property-listing a {
+        margin: 0;
+    }
+    #property-listings .property-listing .media-body {
+        padding: 10px;
+    }
+    #mobile {
+      display: block;
+    }
+    #desktop {
+      display: none;
+    }
+
+}
+
 @media only screen and (min-width: 992px) {
     #property-listings .property-listing img {
         max-width: 180px;
