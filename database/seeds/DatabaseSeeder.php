@@ -100,8 +100,14 @@ class DatabaseSeeder extends Seeder
             'notes' => 'Price is asking price',
         ]);
 
-            DB::table('pages')->insert([
+        DB::table('pages')->insert([
                 'text' => 'BLAH BLAH BLAH BLAH BLAH BLAH BLAH',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Nick Cinque',
+            'email' => 'nicholas.cinque@gmail.com',
+            'password' => bcrypt('artmarketnow'),
         ]);
     }
 }
