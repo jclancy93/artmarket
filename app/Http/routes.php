@@ -28,6 +28,9 @@
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', 'HomeController@index');
+    Route::get('/about', 'HomeController@about');
+    Route::get('/about/edit', 'HomeController@edit');
+    Route::post('/about/edit', 'HomeController@update');
     Route::resource('home', 'HomeController');
 	Route::get('search', ['middleware' => 'web', 'uses' => 'SearchController@index']);
 	Route::resource('artworks', 'ArtworkController');

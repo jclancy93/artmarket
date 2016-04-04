@@ -99,5 +99,9 @@ class DatabaseSeeder extends Seeder
             'image' => NULL,
             'notes' => 'Price is asking price',
         ]);
+
+            DB::table('pages')->insert([
+                'text' => 'BLAH BLAH BLAH BLAH BLAH BLAH BLAH',
+        ]);
     }
 }

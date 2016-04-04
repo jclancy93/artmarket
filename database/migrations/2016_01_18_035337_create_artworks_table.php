@@ -17,7 +17,7 @@ class CreateArtworksTable extends Migration
             $table->string('artist_firstname');
             $table->string('artist_lastname');
             $table->string('artist_fullname');
-            $table->string('artwork');
+            $table->string('artwork')->nullable();
             $table->string('category')->nullable();
             $table->string('year')->nullable();
             $table->string('medium')->nullable();
