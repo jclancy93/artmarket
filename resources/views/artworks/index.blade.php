@@ -183,31 +183,26 @@
 
                 <div class="clearfix visible-sm"></div>
 
-                <div class="col-md-4">Yes</div>
                 <div class="media-body fnt-smaller col-md-8">
                     <a href="#" target="_parent"></a>
 
                     <h4 class="media-heading">
                       <a href="#" target="_parent">{{$artwork->artwork}}</a>
-
+                    </h4>
 
                     <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
-                        <li>4,820 SqFt</li>
+                        <li>{{$artwork->artist_fullname}}</li>
 
                         <li style="list-style: none">|</li>
 
-                        <li>5 Beds</li>
+                        <li>{{$artwork->year}}</li>
 
-                        <li style="list-style: none">|</li>
-
-                        <li>5 Baths</li>
                     </ul>
 
-                    <p class="hidden-xs">Situated between fairmount
-                    park and the prestigious philadelphia cricket
-                    club, this beautiful 2+ acre property is truly
-                    ...</p><span class="fnt-smaller fnt-lighter fnt-arial">Courtesy of HS Fox & Roach-Chestnut Hill
-                    Evergreen</span>
+                    <p class="hidden-xs">{{$artwork->art_fair}}</p><span class="fnt-smaller fnt-lighter fnt-arial">{{$artwork->gallery_name}}</span>
+                    <div class="pull-right">
+                        <a href="{{ url('/login') }}"><button class="btn btn-info">LOG IN TO SEE PRICES</button></a>
+                    </div>
                 </div>
             </div>
         </div><!-- End Listing-->
