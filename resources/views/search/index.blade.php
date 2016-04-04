@@ -1,9 +1,6 @@
 @extends('layouts.app1')
 
 @section('content')
-    <!-- Create Task Form... -->
-
-    <!-- Current Tasks -->
     @if (count($artworks) > 0)
         <div class="panel panel-default">
         <br>
@@ -157,7 +154,7 @@
                                         </td>
                                     @endif
 
-                                    @if (Auth::id() === 1)
+                                    @if (Auth::id() === 1 || Auth::id() === 2 )
                                     <td class="table-text">
                                         <a href="{{ url('/artwork/'.$artwork->id.'/edit') }}"><button class="btn btn-info">EDIT</button></a>
                                     </td>

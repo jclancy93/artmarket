@@ -154,7 +154,7 @@
                                         </td>
                                     @endif
 
-                                    @if (Auth::id() === 1)
+                                    @if (Auth::id() === 1 || Auth::id() === 2 )
                                     <td class="table-text">
                                         <a href="{{ url('/artwork/'.$artwork->id.'/edit') }}"><button class="btn btn-info">EDIT</button></a>
                                     </td>
@@ -178,7 +178,7 @@
         <div class="panel panel-default" id="mobile" style="margin-top: 120px;">
         @foreach ($artworks as $artwork)
         <div class="row row-fluid">
-            <div class="media">
+            <div class="media" onclick="window.location='{{url('artwork/'.$artwork->id)}}'">
   
 
                 <div class="clearfix visible-sm"></div>
@@ -201,7 +201,11 @@
 
                     <p class="hidden-xs">{{$artwork->art_fair}}</p><span class="fnt-smaller fnt-lighter fnt-arial">{{$artwork->gallery_name}}</span>
                     <div class="pull-right">
-                        <a href="{{ url('/login') }}"><button class="btn btn-info">LOG IN TO SEE PRICES</button></a>
+                        @if (Auth::guest())
+                            <a href="{{ url('/login') }}"><button style="margin-top: -20px;" class="btn btn-info">LOG IN TO SEE PRICES</button></a>
+                        @else
+                            <div>{{ $artwork->price }}</div>
+                        @endif
                     </div>
                 </div>
             </div>

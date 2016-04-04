@@ -7,7 +7,7 @@
             <h1 class="text-center">ABOUT THIS SITE</h1>
             <br>
             <p style="line-height: 300%;">{{{$page->text}}}</p>
-            @if (Auth::id() === 1)
+            @if (Auth::id() === 1 || Auth::id() === 2 )
             <a href="{{ url('about/edit') }}"><button style="display: block; margin: 0 auto;" class="btn btn-info">EDIT ABOUT PAGE</button></a>
             @endif
         </div>    
