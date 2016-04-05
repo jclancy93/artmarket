@@ -175,6 +175,62 @@
                 </div>
             </div>
         </div>
+                <div class="panel panel-default" id="mobile" style="margin-top: 120px;">
+         <h1 class="text-center" style="font-size: 40px; font-family: Lato !important; text-transform: uppercase;"> ARTIST INDEX</h1>
+         <h4 class="text-center" style="font-size: 20px; font-weight: 300; font-family: Lato !important;"><?php echo count($artworks)?> Results</h4>
+
+        <?php $sortBy = !empty( $_GET['sortBy'] ) ? $_GET['sortBy'] : ''; ?>
+
+        <div class="form-group">
+            <div style="position: absolute; margin-top: -30px; margin-right: 30px; right: 0px; font-family: Lato !important; ">
+             <strong>Sort By:</strong>
+                 <select onchange="sortBy(value)" class="selectpicker" style="font-family: Lato" name="sortTerm">
+                     <option value="artist_lastname" style="font-family: Lato !important;">None</option>
+                     <option value="artist_fullname" style="font-family: Lato !important;"<?php echo $sortBy == 'artist_fullname' ? 'selected' : ''; ?>>Artist</option>
+                     <option value="artwork" style="font-family: Lato !important;" <?php echo $sortBy == 'artwork' ? 'selected' : ''; ?>>Title</option>
+                     <option value="gallery_name" style="font-family: Lato !important;" <?php echo $sortBy == 'gallery_name' ? 'selected' : ''; ?>>Gallery Name</option>
+                     <option value="year" style="font-family: Lato !important;" <?php echo $sortBy == 'year' ? 'selected' : ''; ?>>Year</option>
+                     <option value="art_fair_year" style="font-family: Lato !important;" <?php echo $sortBy == 'art_fair_year' ? 'selected' : ''; ?>>Art Fair Date</option>
+                 </select>
+             </div>
+         </div>
+        @foreach ($artworks as $artwork)
+        <div class="row row-fluid">
+            <div class="media" onclick="window.location='{{url('artwork/'.$artwork->id)}}'">
+  
+
+                <div class="clearfix visible-sm"></div>
+
+                <div class="media-body fnt-smaller col-md-8">
+                    <a href="#" target="_parent"></a>
+
+                    <h4 class="media-heading">
+                      <a href="#" target="_parent">{{$artwork->artwork}}</a>
+                    </h4>
+
+                    <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                        <li>{{$artwork->artist_fullname}}</li>
+
+                        <li style="list-style: none">|</li>
+
+                        <li>{{$artwork->year}}</li>
+
+                    </ul>
+
+                    <p class="hidden-xs">{{$artwork->art_fair}}</p><span class="fnt-smaller fnt-lighter fnt-arial">{{$artwork->gallery_name}}</span>
+                    <div class="pull-right">
+                        @if (Auth::guest())
+                            <a href="{{ url('/login') }}"><button style="margin-top: -20px;" class="btn btn-info">LOG IN TO SEE PRICES</button></a>
+                        @else
+                            <div>{{ $artwork->price }}</div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Listing-->
+        <hr>
+        @endforeach
+        </div>
      @else 
 
 
