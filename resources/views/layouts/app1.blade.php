@@ -86,6 +86,9 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/about') }}" style="color: black; font-size: 16px;">ABOUT</a></li>
                     </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/contact') }}" style="color: black; font-size: 16px;">CONTACT</a></li>
+                    </ul>
                     @if (Auth::id() == 1)
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/artworks/create') }}" style="color: black; font-size: 16px;">ADD ARTWORK</a></li>
