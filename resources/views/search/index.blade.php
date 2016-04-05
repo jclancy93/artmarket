@@ -2,7 +2,7 @@
 
 @section('content')
     @if (count($artworks) > 0)
-        <div class="panel panel-default">
+        <div class="panel panel-default" id="desktop">
         <br>
         <br>
         <br>
