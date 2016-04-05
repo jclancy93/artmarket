@@ -12,22 +12,22 @@
         	{{ method_field('POST') }}
         	{!! csrf_field() !!}
           <!-- Form Name -->
-          <legend class="text-center">Edit About Page</legend>
+          <legend class="text-center">Edit Page Text</legend>
           <div class="col-md-6">
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="textinput">Artist First Name</label>
+            <label class="col-sm-2 control-label" for="textinput">Page Text</label>
             <div class="col-sm-10">
-            <textarea class="form-control" rows="3" value="{{$page->text}}"  name="text"></textarea>
+            <textarea class="form-control" rows="8" value="{{$page->text}}"  name="text"></textarea>
             </div>
           </div>
          </div>
 
-                   <div class="form-group">
+         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
               <br>
-                <a href="{{ url('/artworks') }}" class="btn btn-default">Cancel</a>
+                <a href="{{ URL::previous() }}" class="btn btn-default">Cancel</a>
                 <button type="submit" class="btn btn-primary">Save</button>
               </div>
             </div>

@@ -104,6 +104,10 @@ class DatabaseSeeder extends Seeder
                 'text' => 'BLAH BLAH BLAH BLAH BLAH BLAH BLAH',
         ]);
 
+        DB::table('pages')->insert([
+                'text' => 'BLAH BLAH BLAH BLAH BLAH BLAH BLAH',
+        ]);
+
         DB::table('users')->insert([
             'name' => 'Nick Cinque',
             'email' => 'nicholas.cinque@gmail.com',

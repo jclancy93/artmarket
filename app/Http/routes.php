@@ -29,8 +29,11 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', 'HomeController@index');
     Route::get('/about', 'HomeController@about');
-    Route::get('/about/edit', 'HomeController@edit');
-    Route::post('/about/edit', 'HomeController@update');
+    Route::get('/contact', 'HomeController@contact');
+    Route::get('/about/edit', 'HomeController@editAbout');
+    Route::post('/about/edit', 'HomeController@updateAbout');
+    Route::get('/contact/edit', 'HomeController@editContact');
+    Route::post('/contact/edit', 'HomeController@updateContact');
     Route::resource('home', 'HomeController');
 	Route::get('search', ['middleware' => 'web', 'uses' => 'SearchController@index']);
 	Route::resource('artworks', 'ArtworkController');

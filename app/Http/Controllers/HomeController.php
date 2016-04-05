@@ -35,13 +35,19 @@ class HomeController extends Controller
         return view('about', ['page' => $page]);   
     }
 
-    public function edit() 
+    public function contact()
+    {
+        $page = Page::find(2);
+        return view('contact', ['page' => $page]);   
+    }
+
+    public function editAbout() 
     {
          $page = Page::find(1);
         return view('pages.edit', ['page' => $page]);   
     }
 
-    public function update(Request $request)
+    public function updateAbout(Request $request)
     {
         $params = $request->input();
 
@@ -51,5 +57,23 @@ class HomeController extends Controller
         $page->save();
 
         return redirect()->action('HomeController@about');
+    }
+
+    public function editContact() 
+    {
+         $page = Page::find(2);
+        return view('pages.edit', ['page' => $page]);   
+    }
+
+    public function updateContact(Request $request)
+    {
+        $params = $request->input();
+
+        $page = Page::find(2);
+        $page->text = $params['text'];
+
+        $page->save();
+
+        return redirect()->action('HomeController@contact');
     }
 }
