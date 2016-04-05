@@ -194,6 +194,7 @@
                  </select>
              </div>
          </div>
+          <hr>
         @foreach ($artworks as $artwork)
         <div class="row row-fluid">
             <div class="media" onclick="window.location='{{url('artwork/'.$artwork->id)}}'">
