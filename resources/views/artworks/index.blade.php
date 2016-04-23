@@ -207,10 +207,10 @@
 
                     <h4 class="media-heading">
                       <a href="#" target="_parent">
-                          @if ($artwork->artwork != '') 
-                          {{$artwork->artwork}}
-                          @else 
+                          @if ($artwork->artwork == '') 
                           Untitled
+                          @else 
+                          {{$artwork->artwork}}
                           @endif
                       </a>
                     </h4>
