@@ -210,6 +210,7 @@
                           @if (is_null($artwork->artwork)) 
                           Untitled
                           @else 
+                          <?php var_dump($artwork->artwork) ?>
                           {{$artwork->artwork}}
                           @endif
                       </a>
