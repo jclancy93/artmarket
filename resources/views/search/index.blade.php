@@ -218,7 +218,7 @@
 
                     </ul>
 
-                    <p class="fnt-smaller fnt-lighter fnt-arial">{{$artwork->art_fair}}</p><p class="fnt-smaller fnt-lighter fnt-arial">{{$artwork->gallery_name}}</span>
+                    <p class="fnt-smaller fnt-arial">{{$artwork->art_fair}}</p><p class="fnt-smaller fnt-lighter fnt-arial">{{$artwork->gallery_name}}</span>
                     <div class="pull-right">
                         @if (Auth::guest())
                             <a href="{{ url('/login') }}"><button style="margin-top: -20px;" class="btn btn-info">LOG IN TO SEE PRICES</button></a>
