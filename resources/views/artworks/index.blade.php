@@ -206,7 +206,7 @@
                     <a href="#" target="_parent"></a>
 
                     <h4 class="media-heading">
-                      <a href="#" target="_parent">{{$artwork->artwork}}</a>
+                      <a href="#" target="_parent">{{$artwork->artwork or 'Untitled'}}</a>
                     </h4>
 
                     <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
