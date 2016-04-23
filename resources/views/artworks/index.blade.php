@@ -207,7 +207,7 @@
 
                     <h4 class="media-heading">
                       <a href="#" target="_parent">
-                          @if ($artwork->artwork == '') 
+                          @if (is_null($artwork->artwork)) 
                           Untitled
                           @else 
                           {{$artwork->artwork}}
