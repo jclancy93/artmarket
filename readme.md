@@ -1,25 +1,36 @@
-## Laravel PHP Framework
+# ArtMarket 
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+ArtMarket is a platform that allows people to track and add artists using a minimal UI
 
-Art Market is a personal project that I have built with Laravel 5 and a few other things. More updates to come.
+# Demo of Application 
 
-## Official Documentation
+http://shrouded-dusk-5570.herokuapp.com/
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+# Globely Dev Setup
 
-## Contributing
+1. Install dependencies  
+  Open up a terminal window/tab and type
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+  ```
+  composer install
+  ```
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+2. Start Gulp
+  Open up a terminal window/tab and type
 
-### License
+  ```
+  gulp watch
+  ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+  Gulp will make sure that all your SCSS gets compiled.
+
+3. Start Laravel Server
+  Open up a terminal window/tab and type
+  
+  ```
+  php artisan serve
+  ```
+4. Direct your browser to http://localhost:8000
+  You should be able to see all your changes on refresh.
+
