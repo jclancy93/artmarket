@@ -6,7 +6,7 @@ ArtMarket is a platform that allows people to track and add artists using a mini
 
 http://shrouded-dusk-5570.herokuapp.com/
 
-# Globely Dev Setup
+# Dev Setup
 
 1. Install dependencies  
   Open up a terminal window/tab and type
